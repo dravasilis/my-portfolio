@@ -34,7 +34,7 @@ function MenuDropdownPanel({isMenuOpen}:MenuDropdownPanelProps){
                <span className=" text-5xl font-bold text-stone-300">Let's work together!</span>
                <span className=" text-2xl text-stone-300 leading-relaxed tracking-wide">Feeling ready for our first collaboration? Feel free to contact me down below!</span>
                <button className="text-xl flex gap-2 items-center font-bold text-stone-300 border-2 rounded-lg border-stone-300 w-max py-2 px-4 hover:bg-stone-300 
-               hover:text-teal-800 duration-150 active:scale-95 ">  Get in touch</button>
+               hover:text-teal-800 duration-1000 active:scale-95 hover:rotate-[360deg]   ">  Get in touch</button>
             </div>
          </div>
          </div>

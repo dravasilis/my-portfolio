@@ -17,7 +17,7 @@ function CustomMenuIcon({handleClick, isMenuOpen}:CustomMenuIconProps){
       menuIconRef.current.style.transitionDuration = '1500ms';
       setInterval(()=>{
          if(  !menuIconRef.current ){return}
-         menuIconRef.current.style.top = '1rem'
+         menuIconRef.current.style.top = '3rem'
          menuIconRef.current.style.right = '13rem'
    },1000)
 

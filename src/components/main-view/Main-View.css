@@ -1,5 +1,5 @@
 .view{
-    background: linear-gradient(0deg, rgb(0 13 14) 65%, rgb(4, 29, 36) 100%)
+    background: linear-gradient(0deg, rgb(0 13 14) 65%, #041d24 100%)
     
 } 
 
@@ -12,16 +12,20 @@
     background: url(../../../public/assets/img/stars.jpg) repeat-x;
     height: 50rem;
     width: 12000px;
-    animation: slide 850s linear infinite;
+    animation: slideIn 850s linear infinite;
     background-size: contain;
     opacity: 0;
     margin-left: 2rem;
  }
- @keyframes slide {
+ @keyframes slideIn {
     0% {
       transform: translate(0);
     }
     100% {
       transform: translate(-6000px); /* The image width */
     }
+  }
+  .isMenuOpen{
+    transition-duration: 0ms !important;
+    visibility: hidden;
   }

@@ -1,0 +1,54 @@
+.wrapper {
+    display: inline-flex;
+}
+
+.wrapper .dynamic-texts{
+    margin-left: 15px;
+    height: 90px;
+    line-height: 90px;
+    overflow: hidden;
+    background: linear-gradient(0deg, #000d0e 100%, #041d24 100%);
+    border-radius: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+
+.dynamic-texts li{
+    list-style: none;
+    top: 0;
+    font-size: 50px;
+    color: #5eead4;
+    position: relative;
+    animation: slide 8s steps(4) infinite;
+    font-style: italic;
+
+}
+.dynamic-texts li span{
+    position: relative;
+}
+.dynamic-texts li span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    height: 100%;
+    border-radius: 0rem;
+    background: #000d0e;
+    width: 100%;
+    border-left: 2px solid rgb(36, 228, 228);
+    animation: typing 2s steps(20) infinite;
+} 
+
+@keyframes slide{
+    100%{
+        top: -360px
+    }
+}
+
+@keyframes typing{
+    100%{
+        left:100%;
+        margin: 0 -35px 0 35px;
+    }
+}

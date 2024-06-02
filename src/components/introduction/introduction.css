@@ -33,11 +33,11 @@
     left: 0;
     top: 0.5rem;
     height: 100%;
-    border-radius: 0rem;
+    border-radius: 0rem; 
     background: #000d0e;
     width: 100%;
     border-left: 2px solid rgb(36, 228, 228);
-    animation: typing 2s steps(20) infinite;
+    animation: typing 2s steps(20) infinite ;
 } 
 
 @keyframes slide{
@@ -50,5 +50,19 @@
     100%{
         left:100%;
         margin: 0 -35px 0 35px;
+    }
+}
+
+.hoverClass{
+    img{
+        transition-duration: 900ms;
+    }
+    &:hover{
+        img{
+            transition-duration: 900ms;
+            rotate: 360deg;
+            margin-top: 0.75rem;
+        }
+
     }
 }

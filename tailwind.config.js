@@ -4,7 +4,11 @@ module.exports = {
     "./src/**/*.{ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors:{
+        myTeal: '#5eead4'
+      }
+    },
   },
   plugins: [],
 }

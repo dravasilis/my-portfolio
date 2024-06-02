@@ -2,53 +2,63 @@ import { useEffect, useRef, useState } from 'react';
 import './Main-View.css'
 import Navigation from '../navigation/navigation';
 import { BrowserRouter, Navigate, Route, Routes, useNavigate } from 'react-router-dom';
-import Home from '../home/home';
-import Contact from '../contact/contact';
+import Home from '../introduction/introduction';
+import Introduction from '../introduction/introduction';
+import Work from '../work/work';
+import { log } from 'console';
 
 
 
 function MainView(){
     const starsRef = useRef<HTMLImageElement>(null)
     const starsRef2 = useRef<HTMLImageElement>(null)
-    const routerLinkRef = useRef<HTMLImageElement>(null)
-    const navigate = useNavigate();
+    const routerLinkRef = useRef<HTMLDivElement>(null)
+    const verticalProgressbarRef = useRef<HTMLDivElement>(null)
     const [isMenuOpen, setIsMenuOpen] = useState(false); // State lifted to parent
+    const [scrollToWork, setScrollToWork] = useState(false); // State lifted to parent
     useEffect(() => {
         if(!starsRef.current || !starsRef2.current || !routerLinkRef.current   ){return}
             starsRef.current.style.transitionDuration = '1000ms';
             starsRef2.current.style.transitionDuration = '2500ms';
             routerLinkRef.current.style.transitionDuration = '2500ms';
             setInterval(()=>{
-            routerLinkRef.current!.style.bottom = '30rem';
-                starsRef.current!.style.opacity = '0.5'
-                routerLinkRef.current!.style.opacity = '1'
-                starsRef.current!.style.marginLeft = '-100px'
+                if(!starsRef.current ||  !routerLinkRef.current   ){return}
+                routerLinkRef.current.style.bottom = '30rem';
+                starsRef.current.style.opacity = '0.5'
+                routerLinkRef.current.style.opacity = '1'
+                starsRef.current.style.marginLeft = '-100px'
                 
                 setInterval(()=>{
-                    starsRef2.current!.style.opacity = '0.3'
-                    starsRef2.current!.style.marginLeft = '0px'
+                if(!starsRef2.current  ){return}
+                    starsRef2.current.style.opacity = '0.3'
+                    starsRef2.current.style.marginLeft = '0px'
                 },100)
             },1000)
-
-            navigate('/home')
       },[]);
+      window.addEventListener('scroll', ()=>{
+        let scrollValue = document.documentElement.scrollTop
+        if(verticalProgressbarRef.current){
+            verticalProgressbarRef.current.style.height =  scrollValue*1.2 + 'px'
+        }
+      })
+     
     return(
-        <div className="view h-full bg-red-400">
-            <div className=' w-full'>
+        <div className="view h-full"  >
+            <div className=' w-full fixed top-0 z-10'  >
                 <Navigation isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}/>
             </div>
             <div className="image-container">
                 <div ref={starsRef} className='image'  ></div>
-                <img ref={starsRef2} src="/assets/img/stars.jpg" alt="stars" className=' opacity-0 object-cover absolute top-0 h-full w-full'/>
+                <img ref={starsRef2} src="/assets/img/stars.jpg" alt="stars" className=' opacity-0 object-cover absolute   top-0 h-[50rem] w-full'/>
             </div>  
-            <div ref={routerLinkRef}   className={`opacity-0 relative bottom-[32rem] left-96 ${isMenuOpen ? 'isMenuOpen':null}`} >
-                <Routes>
-                    <Route path='/home'  element={<Home />}/>  
-                    <Route path="/work"/>
-                    <Route path="/experience"/>
-                    <Route path="/about-me"/>
-                    <Route path="/contact" element={<Contact />}/>
-                </Routes>
+            <div ref={routerLinkRef}   className={` gap8 opacity-0 relative bottom-[33rem] ${isMenuOpen ? 'isMenuOpen':null}`} >
+                 <div ref={verticalProgressbarRef} className='min-h-[25rem] absolute ml-80  p-[2px] rounded-3xl bg-myTeal'></div>
+                 <div className='flex flex-col pl-96 gap-96' >
+                    <Introduction setScrollToWork={setScrollToWork}/>
+                    <div id='work'>
+                        <Work />
+                    </div>
+                 </div>
             </div>
         
           </div>

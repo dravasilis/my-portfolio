@@ -20,7 +20,7 @@ function Navigation({ isMenuOpen, setIsMenuOpen }: NavigationProps){
       setInterval(()=>{
          if( !nameRef.current   ){return}
          nameRef.current.style.top = '3rem'
-         nameRef.current.style.left = '13rem'
+         nameRef.current.style.left = '8rem'
          setInterval(()=>{
          if( !nameRef.current ){return}
             nameRef.current.style.transitionDuration = '250ms'
@@ -39,15 +39,13 @@ function Navigation({ isMenuOpen, setIsMenuOpen }: NavigationProps){
 
   
    return(
-      <div className="z-[1000] relative">  
+      <div >  
       {/* navigation bar */}
-      <div className=" sticky top-0 left-0 z-[1001] overflow-x-clip ">
             <a onClick={()=>{ setIsMenuOpen(false)}} href="" ref={nameRef} className='absolute text-lg tracking-normal opacity-75 font-bold -left-24 
-            text-white   hover:tracking-widest  '>
+            text-white   hover:tracking-widest  z-10'>
             &lt; V.D. / &gt;
             </a>
            <CustomMenuIcon handleClick={()=> handleMenu()} isMenuOpen={isMenuOpen}/>
-      </div>
       {/* dropdown menu panel */}
         <MenuDropdownPanel isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       </div>

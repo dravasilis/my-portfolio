@@ -5,8 +5,9 @@
 html{
   height: 100%;
 }
-body {
-  overflow: hidden;
+body { 
+  background:  #000d0e ;
+  overflow-x: hidden;
   height: 100%;
   margin: 0;
   font-family: 'Times-New-Roman';

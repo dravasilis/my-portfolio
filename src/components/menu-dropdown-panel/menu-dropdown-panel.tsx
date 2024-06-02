@@ -13,11 +13,13 @@ function MenuDropdownPanel({isMenuOpen, setIsMenuOpen}:MenuDropdownPanelProps){
       if(!menuPanelRef.current){return}
       menuPanelRef.current.style.transitionDuration = '500ms';
       if(!isMenuOpen){
+         document.body.style.overflow = 'auto'
          menuPanelRef.current.style.transitionDuration = '750ms';
             if(!menuPanelRef.current){return}
             menuPanelRef.current.style.top = '-100vh';
          }
          else{
+         document.body.style.overflow = 'hidden'
             menuPanelRef.current.style.top = '0';
       }
    },[isMenuOpen])
@@ -25,15 +27,12 @@ function MenuDropdownPanel({isMenuOpen, setIsMenuOpen}:MenuDropdownPanelProps){
       <div ref={menuPanelRef} className="gradient  absolute -top-[100vh] left-0  duration-500 w-[100vw] h-[100vh]">
          <div className="w-full h-full flex  items-center justify-around ">
             <div className="flex flex-col gap-8  w-24">
-               <Link onClick={()=>{ setIsMenuOpen(false)}}  className="tabs" to="/home">&lt; Home /&gt;</Link>
-               <Link onClick={()=>{ setIsMenuOpen(false)}} className="tabs" to="/work">&lt; Work /&gt;</Link>
-               <Link onClick={()=>{ setIsMenuOpen(false)}} className="tabs" to="/experience">&lt; Experience /&gt;</Link>
-               <Link onClick={()=>{ setIsMenuOpen(false)}} className="tabs" to="/about-me">&lt; About Me /&gt;</Link>
-               <Link onClick={()=>{ setIsMenuOpen(false)}} className="tabs" to="/contact">&lt; Contact /&gt;</Link>
+               <a onClick={()=>{ setIsMenuOpen(false)}}  className="tabs" href="/">&lt; Home /&gt;</a>
+               <a onClick={()=>{ setIsMenuOpen(false)}} className="tabs" href="/">&lt; Work /&gt;</a>
+               <a onClick={()=>{ setIsMenuOpen(false)}} className="tabs" href="/">&lt; Experience /&gt;</a>
+               <a onClick={()=>{ setIsMenuOpen(false)}} className="tabs" href="/">&lt; About Me /&gt;</a>
+               <a onClick={()=>{ setIsMenuOpen(false)}} className="tabs" href="/">&lt; Contact /&gt;</a>
             </div>
-            <Routes>
-               
-            </Routes>
             <div className="flex flex-col gap-16 w-[30rem]">
                <span className=" text-5xl font-bold text-stone-300">Let's work together!</span>
                <span className=" text-2xl text-stone-300 leading-relaxed tracking-wide">Feeling ready for our first collaboration? Feel free to contact me down below!</span>

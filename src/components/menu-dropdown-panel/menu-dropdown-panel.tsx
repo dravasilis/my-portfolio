@@ -19,12 +19,11 @@ function MenuDropdownPanel({isMenuOpen, setIsMenuOpen}:MenuDropdownPanelProps){
             menuPanelRef.current.style.top = '-100vh';
          }
          else{
-         document.body.style.overflow = 'hidden'
             menuPanelRef.current.style.top = '0';
       }
    },[isMenuOpen])
    return(
-      <div ref={menuPanelRef} className="gradient  absolute -top-[100vh] left-0  duration-500 w-[100vw] h-[100vh]">
+      <div ref={menuPanelRef} className="panelGlass  absolute -top-[100vh] left-0  duration-500 w-[100vw] h-[100vh]">
          <div className="w-full h-full flex  items-center justify-around ">
             <div className="flex flex-col gap-8  w-24">
                <a onClick={()=>{ setIsMenuOpen(false)}}  className="tabs" href="/">&lt; Home /&gt;</a>
@@ -34,9 +33,9 @@ function MenuDropdownPanel({isMenuOpen, setIsMenuOpen}:MenuDropdownPanelProps){
                <a onClick={()=>{ setIsMenuOpen(false)}} className="tabs" href="/">&lt; Contact /&gt;</a>
             </div>
             <div className="flex flex-col gap-16 w-[30rem]">
-               <span className=" text-5xl font-bold text-stone-300">Let's work together!</span>
-               <span className=" text-2xl text-stone-300 leading-relaxed tracking-wide">Feeling ready for our first collaboration? Feel free to contact me down below!</span>
-               <button className="text-xl flex gap-2 items-center font-bold text-stone-300 border-2 rounded-lg border-stone-300 w-max py-2 px-4 hover:bg-stone-300 
+               <span className=" text-5xl font-bold text-white">Let's work together!</span>
+               <span className=" text-2xl text-white leading-relaxed tracking-wide">Feeling ready for our first collaboration? Feel free to contact me down below!</span>
+               <button className="text-xl flex gap-2 items-center font-bold text-white border-2 rounded-lg border-white w-max py-2 px-4 hover:bg-white 
                hover:text-teal-800 duration-200 active:scale-95  hover:tracking-wider ">  Get in touch</button>
             </div>
          </div>

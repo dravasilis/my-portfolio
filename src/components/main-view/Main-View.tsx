@@ -51,8 +51,8 @@ function MainView(){
                 <div ref={starsRef} className='image'  ></div>
                 <img ref={starsRef2} src="/assets/img/stars.jpg" alt="stars" className=' opacity-0 object-cover absolute   top-0 h-[50rem] w-full'/>
             </div>  
-            <div ref={routerLinkRef}   className={` gap8 opacity-0 relative bottom-[33rem] ${isMenuOpen ? 'isMenuOpen':null}`} >
-                 <div ref={verticalProgressbarRef} className='min-h-[25rem] absolute ml-80  p-[2px] rounded-3xl bg-myTeal'></div>
+            <div ref={routerLinkRef}   className="gap-8 opacity-0 relative bottom-[33rem]" >
+                 <div ref={verticalProgressbarRef} className='min-h-[25rem] absolute ml-80  p-[2px] z-0 rounded-3xl bg-myTeal glow'></div>
                  <div className='flex flex-col pl-96 gap-96' >
                     <Introduction setScrollToWork={setScrollToWork}/>
                     <div id='work'>

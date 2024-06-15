@@ -10,8 +10,10 @@ body {
   overflow-x: hidden;
   height: 100%;
   margin: 0;
-  font-family: 'Times-New-Roman';
-  -webkit-font-smoothing: antialiased;
+  /* font-family: "Josefin Sans", sans-serif;  */
+  /* font-family: "Chakra Petch", sans-serif; */
+  font-family: "Pixelify Sans", sans-serif;
+  /* -webkit-font-smoothing: antialiased; */
   -moz-osx-font-smoothing: grayscale;
 }
 

@@ -55,13 +55,13 @@
 
 .hoverClass{
     img{
-        transition-duration: 900ms;
+        transition-duration: 600ms;
     }
     &:hover{
         img{
-            transition-duration: 900ms;
-            rotate: 360deg;
-            margin-top: 0.75rem;
+            transition-duration: 600ms;
+            /* rotate: 360deg; */
+            margin-top: 0.5rem;
         }
 
     }

@@ -56,11 +56,11 @@ function CustomMenuIcon({handleClick, isMenuOpen}:CustomMenuIconProps){
       }
    }
    return(
-      <div ref={menuIconRef} className=" flex flex-col z-10 items-end gap-2 w-9 hover:cursor-pointer  absolute opacity-75  -right-24 "
+      <div ref={menuIconRef} className=" flex flex-col z-10 items-end gap-2 w-9 hover:cursor-pointer  absolute opacity-75   -right-24 "
       onClick={()=>handleClick()}    onMouseOver={()=>handleMenuHover('hover')} onMouseLeave={()=>handleMenuHover('leave')}>
-               <div ref={firstLineRef}  className="py-[1.5px] bg-white w-full duration-300"></div>
-               <div ref={secondLineRef} className="py-[1.5px] bg-white w-3/4 duration-300"></div>
-               <div ref={thirdLineRef} className="py-[1.5px] bg-white w-1/2 duration-300"></div>
+               <div ref={firstLineRef}  className="py-[1.5px] bg-white w-full duration-300   glow "></div>
+               <div ref={secondLineRef} className="py-[1.5px] bg-white w-3/4 duration-300 glow "></div>
+               <div ref={thirdLineRef} className="py-[1.5px] bg-white w-1/2 duration-300  glow "></div>
             </div>
    )
 }

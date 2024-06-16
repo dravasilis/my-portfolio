@@ -28,7 +28,7 @@
   
 }
 .glassSkills{
-    background: #ff00f215;
+    background: #ff00f210;
     border-radius: 16px;
     backdrop-filter: blur(25px);
     -webkit-backdrop-filter: blur(25px);
@@ -45,8 +45,8 @@
         /* inside */ inset 0 0 0 2px rgba(0, 0, 0, 0.15),
         /* outside */      0 0 0 2px rgba(0, 0, 0, 0.15),
         /* --- glow --- */
-        /* inside */ inset 0 0 2rem white,
-        /* outside */      0 0 1rem white;
+        /* inside */ inset 0 0 2rem #00e1ff,
+        /* outside */      0 0 1rem #00e1ff;
         text-shadow: 0 0 1.75rem #00e1ff;
     letter-spacing: 0.05rem;
 }

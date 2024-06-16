@@ -41,8 +41,8 @@ function Navigation({ isMenuOpen, setIsMenuOpen }: NavigationProps){
    return(
       <div >  
       {/* navigation bar */}
-            <a onClick={()=>{ setIsMenuOpen(false)}} href="" ref={nameRef} className='absolute text-lg tracking-normal opacity-75 font-bold -left-24 
-            text-white   hover:tracking-widest  z-10'>
+            <a onClick={()=>{ setIsMenuOpen(false)}} href="" ref={nameRef} className='absolute text-lg tracking-normal opacity-75 font-bold -left-24  text-glow-blue
+            text-white   hover:tracking-widest  z-1 '>
             &lt; V.D. / &gt;
             </a>
            <CustomMenuIcon handleClick={()=> handleMenu()} isMenuOpen={isMenuOpen}/>

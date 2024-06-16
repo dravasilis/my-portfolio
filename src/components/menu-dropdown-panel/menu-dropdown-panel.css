@@ -24,10 +24,17 @@
    background:linear-gradient(0deg, rgba(0, 20, 31, 0.432) 50%, rgba(6, 71, 97, 0.486) 100%);
    animation: glass 5s infinite;
    border-radius: 16px;
-   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+   
    backdrop-filter: blur(20px);
    -webkit-backdrop-filter: blur(20px);
-   border: 1px solid rgba(0, 255, 255, 0.38);
+   border: 1px solid #00ffff61;
+   box-shadow: 
+   /* --- "glass" tube --- */
+   /* inside */ inset 0 0 0 2px rgba(0, 0, 0, 0.15),
+   /* outside */      0 0 0 2px rgba(0, 0, 0, 0.15),
+   /* --- glow --- */
+   /* inside */ inset 0 0 4rem #00ffff61,
+   /* outside */      0 0 4rem #00ffff61;
    }
 
  

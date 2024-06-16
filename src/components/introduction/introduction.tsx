@@ -13,7 +13,7 @@ function Introduction({setScrollToWork}:IntroductionProps){
    return(
       <div className='flex flex-col  gap-44 relative'>
          <div className="text-5xl font-bold tracking-wide text-white leading-relaxed ">
-            <span >Hi, my name is <span className="text-myTeal">Vasilis Dramitinos</span><br></br>and I develop</span>
+            <span >Hi, my name is <span className="text-myTeal ">Vasilis Dramitinos</span><br></br>and I develop</span>
             <div className='wrapper'>
                <ul className="dynamic-texts">
                   <li><span>&lt; websites  / &gt;</span></li>

@@ -21,3 +21,29 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.neon-sign-purple{
+  border: 4px solid #ff00f2;   
+  box-shadow: 
+  /* --- "glass" tube --- */
+  /* inside */ inset 0 0 0 2px rgba(0, 0, 0, 0.15),
+  /* outside */      0 0 0 2px rgba(0, 0, 0, 0.15),
+  /* --- glow --- */
+  /* inside */ inset 0 0 2.5rem #ff00f2,
+  /* outside */      0 0 1.5rem #ff00f2;
+  text-shadow: 0 0 1.75rem #ff00f2;
+}
+.neon-sign-blue{
+  border: 4px solid #00e1ff;   
+  box-shadow: 
+  /* --- "glass" tube --- */
+  /* inside */ inset 0 0 0 2px rgba(0, 0, 0, 0.15),
+  /* outside */      0 0 0 2px rgba(0, 0, 0, 0.15),
+  /* --- glow --- */
+  /* inside */ inset 0 0 2rem white,
+  /* outside */      0 0 1.25rem white;
+  text-shadow: 0 0 1.75rem #00e1ff;
+}
+.text-glow-blue{
+  text-shadow: 0 0 1.75rem #00e1ff;
+
+}

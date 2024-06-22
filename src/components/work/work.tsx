@@ -56,9 +56,9 @@ function Work(){
    return(
       <div className='flex flex-col gap-24 '>
             <span className='text-5xl text-teal-200 font-bold neon-sign-purple w-max rounded-xl p-4'> &lt; Work / &gt;</span>
-            <div className='flex flex-col gap-12'>
+            <div className='flex flex-col gap-12 -ml-8'>
                {projects.map((project,index) =>(
-                  <div key={index} ref={el => projectRefs.current[index] = el} className={`fade-in -ml-44 relative w-max flex items-center gap-2 p-4 z-[1] ${index===1? 'flex-row-reverse':''} `}>
+                  <div key={index} ref={el => projectRefs.current[index] = el} className={`fade-in   relative w-full flex items-center gap-2 p-4 z-[1] ${index===1? 'flex-row-reverse':''} `}>
                      <span className={`absolute z-[1] title  glass text-white text-3xl  top-16 py-3 px-4 w-80 ${index===1? '-right-32':'-left-32'}`}>{project.name}</span>
                      <div className=' relative'>
                         <div className='projectImg-container'>

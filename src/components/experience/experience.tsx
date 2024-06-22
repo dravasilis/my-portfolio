@@ -53,7 +53,7 @@ function Experience( ){
    return(
    <div className=' flex flex-col '>
       <span className='text-5xl text-teal-200 font-bold neon-sign-purple w-max rounded-xl p-4'> &lt; Experience / &gt;</span>
-      <div className=' w-max  ml-[36rem] top-[3400px] absolute  flex flex-col gap-[20rem]'>
+      <div className=' w-max  ml-[36rem] top-[3800px] absolute  flex flex-col gap-[20rem]'>
          <span ref={yearLabelRef} className='neon-sign-purple opacity-0    text-white w-max py-4 px-12 duration-1000 z-[1] text-3xl bg-slate-900  rounded-xl'>2018</span>
          <span ref={yearLabelRef2} className='neon-sign-purple opacity-0   text-white w-max py-4 px-12 duration-1000 z-[1] text-3xl bg-slate-900  rounded-xl'>2021</span>
          <span ref={yearLabelRef3} className='neon-sign-purple opacity-0   text-white w-max py-4 px-12 duration-1000 z-[1] text-3xl bg-slate-900  rounded-xl'>2023</span>

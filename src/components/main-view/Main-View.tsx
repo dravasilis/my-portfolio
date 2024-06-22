@@ -47,7 +47,7 @@ function MainView(){
 
       window.addEventListener('scroll', ()=>{
         const scrollValue = document.documentElement.scrollTop;
-        const maxVerticalHeight = 3300; // Maximum height for the vertical bar
+        const maxVerticalHeight = 3700; // Maximum height for the vertical bar
         const maxHorizontalWidth = 720; // 45rem in pixels
         const verticalThresholdScroll = maxVerticalHeight / 1.2;
       const horizontalThresholdScroll = verticalThresholdScroll + (maxHorizontalWidth / 2);
@@ -86,9 +86,9 @@ function MainView(){
                 <img ref={starsRef2} src="/assets/img/stars.jpg" alt="stars" className=' opacity-0 object-cover absolute   top-0 h-[50rem] w-full'/>
             </div>  
             <div ref={routerLinkRef}   className="gap-8 opacity-0 relative bottom-[33rem]" >
-                 <div ref={verticalProgressbarRef} className='min-h-[25rem] max-h-[3300px]   absolute ml-80  p-[2px] z-0 rounded-3xl bg-myTeal glow'></div>
-                 <div ref={horizontalProgressbarRef} className='absolute max-w-[45rem]    ml-80 top-[3300px]  p-[2px] z-0 rounded-3xl bg-myTeal glow'></div>
-                 <div ref={verticalProgressbarRef2} className='absolute    ml-[65rem] top-[3300px]  p-[2px] z-0 rounded-3xl bg-myTeal glow'></div>
+                 <div ref={verticalProgressbarRef} className='min-h-[25rem] max-h-[3700px]   absolute ml-80  p-[2px] z-0 rounded-3xl bg-myTeal glow'></div>
+                 <div ref={horizontalProgressbarRef} className='absolute max-w-[45rem]    ml-80 top-[3700px]  p-[2px] z-0 rounded-3xl bg-myTeal glow'></div>
+                 <div ref={verticalProgressbarRef2} className='absolute    ml-[65rem] top-[3700px]  p-[2px] z-0 rounded-3xl bg-myTeal glow'></div>
                  <div className='flex flex-col pl-96 gap-96' >
                     <Introduction setScrollToWork={setScrollToWork}/>
                     <div id='about-me'>

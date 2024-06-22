@@ -1,0 +1,15 @@
+ .gradient-line{
+    background: linear-gradient(90deg, #26e1fa 0%, #ff00f2 100%) !important;
+    box-shadow: 0 0 40px #fff, 0 0 50px #00e1ff, 0 0 60px #00e1ff, 0 0 70px #ff00f2, 0 0 80px #ff00f2, 0 0 90px #ff00f2, 0 0 100px #ff00f2;
+
+ }
+
+ .insta:hover ~ #bullet1{
+        visibility: visible;
+ }
+ .linkedin:hover ~ #bullet2{
+        visibility: visible;
+ }
+ .mail:hover ~ #bullet3{
+        visibility: visible;
+ }

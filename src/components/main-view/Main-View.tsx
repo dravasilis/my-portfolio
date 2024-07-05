@@ -98,7 +98,7 @@ function MainView() {
         horizontalProgressbarRef.current.style.width =
           maxHorizontalWidth + "px";
         verticalProgressbarRef2.current.style.height =
-          (scrollValue - horizontalThresholdScroll2) * 0.8 + "px";
+          (scrollValue - horizontalThresholdScroll) * 1.5 + "px";
       }
     } else {
       // New condition for additional horizontal lines

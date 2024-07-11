@@ -40,7 +40,7 @@ function MainView() {
       if (!starsRef.current || !routerLinkRef.current) {
         return;
       }
-      routerLinkRef.current.style.bottom = "30rem";
+      routerLinkRef.current.style.bottom = "33rem";
       starsRef.current.style.opacity = "0.7";
       routerLinkRef.current.style.opacity = "1";
       starsRef.current.style.marginLeft = "-100px";
@@ -57,10 +57,10 @@ function MainView() {
 
   window.addEventListener("scroll", () => {
     const scrollValue = document.documentElement.scrollTop;
-    const maxVerticalHeight = 3700; // Maximum height for the vertical bar
+    const maxVerticalHeight = 3655; // Maximum height for the vertical bar
     const maxHorizontalWidth = 720; // 45rem in pixels
     const maxVerticalHeight2 = 5500; // Example value for second vertical line
-    const maxHorizontalWidthNew = 300; // Example value for new horizontal lines
+    const maxHorizontalWidthNew = window.innerWidth; // Example value for new horizontal lines
     const verticalThresholdScroll = maxVerticalHeight / 1.2;
     const secondVerticalThresholdScroll = maxVerticalHeight2 / 1.2;
     const horizontalThresholdScroll =
@@ -111,7 +111,7 @@ function MainView() {
       ) {
         verticalProgressbarRef.current.style.height = maxVerticalHeight + "px";
         horizontalProgressbarRef.current.style.width =
-          maxHorizontalWidth + "px";
+          maxHorizontalWidthNew + "px";
         verticalProgressbarRef2.current.style.height =
           maxVerticalHeight2 + "px";
 
@@ -143,27 +143,27 @@ function MainView() {
       </div>
       <div
         ref={routerLinkRef}
-        className="gap-8 opacity-0 relative bottom-[33rem]"
+        className="gap-8 opacity-0 relative bottom-[40rem] pt-12 overflow-hidden"
       >
         <div
           ref={verticalProgressbarRef}
-          className="min-h-[25rem] max-h-[3700px]   absolute ml-80  p-[2px] z-0 rounded-3xl bg-myTeal glow"
+          className="min-h-[25rem] max-h-[3610px] setOverflow  absolute ml-80  p-[2px] z-0 rounded-3xl bg-myTeal glow"
         ></div>
         <div
           ref={horizontalProgressbarRef}
-          className="absolute max-w-[45rem]    ml-80 top-[3700px]  p-[2px] z-0 rounded-3xl bg-myTeal glow"
+          className="absolute max-w-[45rem]    ml-80 top-[3655px]  p-[2px] z-0 rounded-3xl bg-myTeal glow"
         ></div>
         <div
           ref={verticalProgressbarRef2}
-          className="absolute max-h-[1800px]   ml-[65rem] top-[3700px]  p-[2px] z-0 rounded-3xl bg-myTeal glow"
+          className="absolute max-h-[1848px]   ml-[65rem] top-[3655px]  p-[2px] z-0 rounded-3xl bg-myTeal glow"
         ></div>
         <div
           ref={horizontalProgressbarRef2}
-          className="absolute max-w-[30%]     ml-[65rem] top-[5500px]  p-[2px] z-0 rounded-3xl bg-myTeal glow"
+          className="absolute       ml-[65rem] top-[5500px]  p-[2px] z-0 rounded-3xl bg-myTeal glow"
         ></div>
         <div
           ref={horizontalProgressbarRef3}
-          className="absolute max-w-[30%]     ml-[65rem] top-[5500px]  p-[2px] z-0 rounded-3xl bg-myTeal glow"
+          className="absolute       ml-[65rem] top-[5500px]  p-[2px] z-0 rounded-3xl bg-myTeal glow"
         ></div>
         <div className="flex flex-col pl-96 gap-96">
           <Introduction setScrollToWork={setScrollToWork} />

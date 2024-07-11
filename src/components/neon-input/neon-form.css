@@ -22,29 +22,27 @@
 
 .login-box .user-box input {
     width: 100%;
-    padding: 10px 0;
     font-size: 16px;
     color: #fff;
     margin-bottom: 30px;
-    border: none;
-    border-bottom: 1px solid #fff;
+    /* border: none; */
+
     outline: none;
     background: transparent;
 }
 
 .login-box .user-box textarea {
     width: 100%;
-    padding: 10px 0;
     font-size: 16px;
     color: #fff;
     margin-bottom: 30px;
-    border: none;
-    border-bottom: 1px solid #fff;
+    /* border: none; */
+
     outline: none;
     background: transparent;
 }
 
-.login-box .user-box label {
+/* .login-box .user-box label {
     position: absolute;
     top: 0;
     left: 0;
@@ -53,23 +51,23 @@
     color: #fff;
     pointer-events: none;
     transition: .2s;
-}
+} */
 
-.login-box .user-box input:focus ~ label,
+/* .login-box .user-box input:focus ~ label,
 .login-box .user-box input:active ~ label {
     top: -20px;
     left: 0;
     color: #03e9f4;
     font-size: 12px;
-}
+} */
 
-.login-box .user-box textarea:focus ~ label,
+/* .login-box .user-box textarea:focus ~ label,
 .login-box .user-box textarea:active ~ label {
     top: -20px;
     left: 0;
     color: #03e9f4;
     font-size: 12px;
-}
+} */
 
 .login-box form button {
     position: relative;

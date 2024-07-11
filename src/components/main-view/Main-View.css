@@ -1,34 +1,43 @@
-.view{
-    background: linear-gradient(0deg, #000d0e 88%, #041d24 100%)
-    
-} 
+.view {
+  background: linear-gradient(0deg, #000d0e 88%, #041d24 100%)
+}
 
-.image-container{
-    overflow: hidden;
+.image-container {
+  overflow: hidden;
 }
 
 
- .image{
-    background: url(../../../public/assets/img/stars.jpg) repeat-x;
-    height: 50rem;
-    width: 12000px;
-    animation: slideIn 600s linear infinite;
-    background-size: contain;
-    opacity: 0;
-    margin-left: 2rem;
- }
- @keyframes slideIn {
-    0% {
-      transform: translate(0);
-    }
-    100% {
-      transform: translate(-6000px); /* The image width */
-    }
+.image {
+  background: url(../../../public/assets/img/stars.jpg) repeat-x;
+  height: 50rem;
+  width: 12000px;
+  animation: slideIn 600s linear infinite;
+  background-size: contain;
+  opacity: 0;
+  margin-left: 2rem;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translate(0);
   }
-  .isMenuOpen{
-    transition-duration: 0ms !important;
-    visibility: hidden;
+
+  100% {
+    transform: translate(-6000px);
+    /* The image width */
   }
-  .glow{
-    box-shadow: 0 0 10px #fff, 0 0 30px #00e1ff, 0 0 40px #00e1ff, 0 0 50px #00e1ff, 0 0 60px #00e1ff, 0 0 70px #00e1ff, 0 0 80px #00e1ff;;
-  }
+}
+
+.isMenuOpen {
+  transition-duration: 0ms !important;
+  visibility: hidden;
+}
+
+.glow {
+  box-shadow: 0 0 10px #fff, 0 0 30px #00e1ff, 0 0 40px #00e1ff, 0 0 50px #00e1ff, 0 0 60px #00e1ff, 0 0 70px #00e1ff, 0 0 80px #00e1ff;
+  ;
+}
+
+.setOverflow {
+  overflow: visible !important;
+}

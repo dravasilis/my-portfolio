@@ -19,7 +19,7 @@ function Work(){
    },
       {
       name:'Admin Software Application',
-      description:'Admin Software for connecting salespersons and businesses. Developed for Linked Business.',
+      description:'Admin Software for connecting salespersons and businesses.',
       img:'/assets/img/LB.png',
       skills:'Frontend Development, Angular, RxJS, Typescript, HTTP Client'
    },

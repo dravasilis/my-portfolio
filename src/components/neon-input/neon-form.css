@@ -1,5 +1,6 @@
 .login-box {
     width: 30rem;
+    margin-top: 4rem;
     padding: 40px;
     background: rgba(0, 0, 0, .5);
     box-sizing: border-box;

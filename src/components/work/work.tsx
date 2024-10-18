@@ -8,19 +8,19 @@ function Work(){
       {
       name:'Movie Database Application',
       description:'It is about a movie application resembling iMDB, including database information about movies, tv shows and video games.',
-      img:'/assets/img/movie-app.png',
+      img:'assets/img/movie-app.png',
       skills:'Frontend Development, React, Typescript, Http Client'
    },
       {
       name:'3D Scene',
       description:'High texture 3D scene made with Unity Engine including 3D models made and designed from scratch accompanied by lighting sources and animations using keyframes and physics.',
-      img:'/assets/img/3d-room.png',
+      img:'assets/img/3d-room.png',
       skills:'Unity, C#, 3D Graphics'
    },
       {
       name:'Admin Software Application',
-      description:'Admin Software for connecting salespersons and businesses.',
-      img:'/assets/img/LB.png',
+      description:'Admin Software developed for businesses.',
+      img:'assets/img/LB.png',
       skills:'Frontend Development, Angular, RxJS, Typescript, HTTP Client'
    },
 ]

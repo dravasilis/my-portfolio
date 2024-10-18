@@ -51,7 +51,7 @@ function Experience() {
   }, []);
   return (
     <div className=" flex flex-col ">
-      <span className="text-5xl text-teal-200 font-bold neon-sign-purple w-max rounded-xl p-4">
+      <span className="text-5xl text-teal-200 font-bold neon-sign-purple w-max rounded-xl -mt-14 p-4">
         {" "}
         &lt; Experience / &gt;
       </span>

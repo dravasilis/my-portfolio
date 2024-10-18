@@ -26,11 +26,11 @@ function MenuDropdownPanel({isMenuOpen, setIsMenuOpen}:MenuDropdownPanelProps){
       <div ref={menuPanelRef} className="panelGlass  absolute -top-[100vh] left-0  duration-500 w-[100vw] h-[100vh]">
          <div className="w-full h-full flex  items-center justify-around ">
             <div className="flex flex-col gap-8  w-24">
-               <a onClick={()=>{ setIsMenuOpen(false)}}  className="tabs" href="/">&lt; Home /&gt;</a>
-               <a onClick={()=>{ setIsMenuOpen(false)}} className="tabs" href="/">&lt; Work /&gt;</a>
-               <a onClick={()=>{ setIsMenuOpen(false)}} className="tabs" href="/">&lt; Experience /&gt;</a>
-               <a onClick={()=>{ setIsMenuOpen(false)}} className="tabs" href="/">&lt; About Me /&gt;</a>
-               <a onClick={()=>{ setIsMenuOpen(false)}} className="tabs" href="/">&lt; Contact /&gt;</a>
+               <a onClick={()=>{ setIsMenuOpen(false)}}  className="tabs" href="">&lt; Home /&gt;</a>
+               <a onClick={()=>{ setIsMenuOpen(false)}} className="tabs" href="">&lt; Work /&gt;</a>
+               <a onClick={()=>{ setIsMenuOpen(false)}} className="tabs" href="">&lt; Experience /&gt;</a>
+               <a onClick={()=>{ setIsMenuOpen(false)}} className="tabs" href="">&lt; About Me /&gt;</a>
+               <a onClick={()=>{ setIsMenuOpen(false)}} className="tabs" href="">&lt; Contact /&gt;</a>
             </div>
             <div className="flex flex-col gap-16 w-[30rem]">
                <span className=" text-5xl font-bold text-white">Let's work together!</span>

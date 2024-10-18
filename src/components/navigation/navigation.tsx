@@ -19,8 +19,8 @@ function Navigation({ isMenuOpen, setIsMenuOpen }: NavigationProps){
       nameRef.current.style.transitionDuration = '1500ms';
       setInterval(()=>{
          if( !nameRef.current   ){return}
-         nameRef.current.style.top = '3rem'
-         nameRef.current.style.left = '8rem'
+         nameRef.current.style.top = '2rem'
+         nameRef.current.style.left = '5%'
          setInterval(()=>{
          if( !nameRef.current ){return}
             nameRef.current.style.transitionDuration = '250ms'
@@ -41,7 +41,7 @@ function Navigation({ isMenuOpen, setIsMenuOpen }: NavigationProps){
    return(
       <div >  
       {/* navigation bar */}
-            <a onClick={()=>{ setIsMenuOpen(false)}} href="" ref={nameRef} className='absolute text-lg tracking-normal opacity-75 font-bold -left-24  text-glow-blue
+            <a onClick={()=>{ setIsMenuOpen(false)}} href="" ref={nameRef} className='absolute text-lg tracking-normal opacity-75 font-bold -left-[20%]  text-glow-blue
             text-white   hover:tracking-widest  z-1 '>
             &lt; V.D. / &gt;
             </a>

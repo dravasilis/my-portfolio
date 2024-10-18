@@ -20,8 +20,8 @@ function CustomMenuIcon({ handleClick, isMenuOpen }: CustomMenuIconProps) {
       if (!menuIconRef.current) {
         return;
       }
-      menuIconRef.current.style.top = "3rem";
-      menuIconRef.current.style.right = "13rem";
+      menuIconRef.current.style.top = "2rem";
+      menuIconRef.current.style.right = "5%";
     }, 1000);
 
     if (isMenuOpen) {
@@ -73,7 +73,7 @@ function CustomMenuIcon({ handleClick, isMenuOpen }: CustomMenuIconProps) {
   return (
     <div
       ref={menuIconRef}
-      className=" flex flex-col z-10 items-end gap-2 w-9 hover:cursor-pointer  absolute opacity-75   -right-24 "
+      className=" flex flex-col z-10 items-end gap-2 w-9 hover:cursor-pointer  absolute opacity-75   -right-[20%] "
       onClick={() => handleClick()}
       onMouseOver={() => handleMenuHover("hover")}
       onMouseLeave={() => handleMenuHover("leave")}

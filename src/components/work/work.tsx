@@ -55,7 +55,7 @@ function Work(){
 }, []);
    return(
       <div className='flex flex-col gap-24 '>
-            <span className='text-5xl text-teal-200 font-bold neon-sign-purple w-max rounded-xl p-4 reflection'> &lt; Work / &gt;</span>
+            <span className='text-5xl text-teal-200 font-bold neon-sign-purple w-max rounded-xl p-4  '> &lt; Work / &gt;</span>
             <div className='flex flex-col gap-12 -ml-8'>
                {projects.map((project,index) =>(
                   <div key={index} ref={el => projectRefs.current[index] = el} className={`fade-in   relative w-full flex items-center gap-2 p-4 z-[1] ${index===1? 'flex-row-reverse':''} `}>

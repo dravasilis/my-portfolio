@@ -13,3 +13,8 @@
  .mail:hover ~ #bullet3{
         visibility: visible;
  }
+ @media screen and (max-width:680px) {
+       .reflection{
+              -webkit-box-reflect: below -8px linear-gradient(to bottom, rgba(0, 0, 0, 0.0) 75%, rgba(0, 0, 0, 0.2));       
+       }
+ }

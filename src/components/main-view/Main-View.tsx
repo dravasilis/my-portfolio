@@ -149,25 +149,25 @@ function MainView() {
       >
         <div
           ref={verticalProgressbarRef}
-          className="min-h-[25rem] max-h-[3610px] setOverflow  absolute ml-80  p-[2px] z-0 rounded-3xl bg-myTeal glow"
+          className="min-h-[25rem] max-h-[3610px] setOverflow  absolute ml-80 max-mobile:ml-[3rem] max-tablet:ml-[15rem]  p-[2px] z-0 rounded-3xl bg-myTeal glow"
         ></div>
         <div
           ref={horizontalProgressbarRef}
-          className="absolute max-w-[45rem]    ml-80 top-[3655px]  p-[2px] z-0 rounded-3xl bg-myTeal glow"
+          className="absolute max-w-[45rem] ml-80  max-mobile:ml-[3rem] max-tablet:ml-[15rem] top-[3655px]  p-[2px] z-0 rounded-3xl bg-myTeal glow"
         ></div>
         <div
           ref={verticalProgressbarRef2}
-          className="absolute max-h-[1848px]   ml-[65rem] top-[3655px]  p-[2px] z-0 rounded-3xl bg-myTeal glow"
+          className="absolute max-h-[1848px] ml-[65rem] top-[3655px]  p-[2px] z-0 rounded-3xl bg-myTeal glow"
         ></div>
         <div
           ref={horizontalProgressbarRef2}
-          className="absolute       ml-[65rem] top-[5500px]  p-[2px] z-0 rounded-3xl bg-myTeal glow"
+          className="absolute ml-[65rem] top-[5500px]  p-[2px] z-0 rounded-3xl bg-myTeal glow"
         ></div>
         <div
           ref={horizontalProgressbarRef3}
-          className="absolute       ml-[65rem] top-[5500px]  p-[2px] z-0 rounded-3xl bg-myTeal glow"
+          className="absolute ml-[65rem] top-[5500px]  p-[2px] z-0 rounded-3xl bg-myTeal glow"
         ></div>
-        <div className="flex flex-col pl-96 gap-96">
+        <div className="flex flex-col pl-96 max-mobile:pl-[7rem] max-mobile:mt-4 max-tablet:pl-[19rem] gap-96">
           <Introduction setScrollToWork={setScrollToWork} />
           <div id="about-me" >
             <AboutMe />

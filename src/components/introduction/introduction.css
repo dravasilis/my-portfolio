@@ -23,7 +23,22 @@
     font-style: italic;
 
 }
-
+@media screen and (max-width:1235px) {
+    .dynamic-texts li{
+        font-size: 2rem;
+    }
+}
+@media screen and (max-width:680px) {
+    .dynamic-texts li{
+        font-size: 1.125rem;
+    }
+    .wrapper .dynamic-texts{
+        padding: 0;
+    }
+    .dynamic-texts li span::after{
+        top: 0.2rem !important;
+    }
+}
 .dynamic-texts li span {
     position: relative;
 }
@@ -39,8 +54,7 @@
     width: 100%;
     border-left: 2px solid rgb(36, 228, 228);
     animation: typing 1.5s steps(30) infinite;
-}
-
+} 
 @keyframes slide {
     100% {
         top: -360px
@@ -67,4 +81,8 @@
         }
 
     }
+}
+.textShadow{
+    text-shadow: 1px 6px 1rem #00e1ff;
+    color: #00f4ff;
 }

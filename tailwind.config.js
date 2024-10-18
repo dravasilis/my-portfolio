@@ -5,6 +5,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens:{
+        tablet:'1235px',
+        mobile: '870px',
+        mobileXS: '680px'
+      },
       colors:{
         myTeal: '#5eead4'
       }

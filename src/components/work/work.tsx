@@ -8,19 +8,19 @@ function Work(){
       {
       name:'Movie Database Application',
       description:'It is about a movie application resembling iMDB, including database information about movies, tv shows and video games.',
-      img:'assets/img/movie-app.png',
+      img:'https://dravasilis.github.io/my-portfolio/assets/img/movie-app.png',
       skills:'Frontend Development, React, Typescript, Http Client'
    },
       {
       name:'3D Scene',
       description:'High texture 3D scene made with Unity Engine including 3D models made and designed from scratch accompanied by lighting sources and animations using keyframes and physics.',
-      img:'assets/img/3d-room.png',
+      img:'https://dravasilis.github.io/my-portfolio/assets/img/3d-room.png',
       skills:'Unity, C#, 3D Graphics'
    },
       {
       name:'Admin Software Application',
       description:'Admin Software developed for businesses.',
-      img:'assets/img/LB.png',
+      img:'https://dravasilis.github.io/my-portfolio/assets/img/LB.png',
       skills:'Frontend Development, Angular, RxJS, Typescript, HTTP Client'
    },
 ]
@@ -55,7 +55,7 @@ function Work(){
 }, []);
    return(
       <div className='flex flex-col gap-24 '>
-            <span className='text-5xl text-teal-200 font-bold neon-sign-purple w-max rounded-xl p-4'> &lt; Work / &gt;</span>
+            <span className='text-5xl text-teal-200 font-bold neon-sign-purple w-max rounded-xl p-4 reflection'> &lt; Work / &gt;</span>
             <div className='flex flex-col gap-12 -ml-8'>
                {projects.map((project,index) =>(
                   <div key={index} ref={el => projectRefs.current[index] = el} className={`fade-in   relative w-full flex items-center gap-2 p-4 z-[1] ${index===1? 'flex-row-reverse':''} `}>

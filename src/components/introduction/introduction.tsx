@@ -24,7 +24,7 @@ function Introduction({setScrollToWork}:IntroductionProps){
             </div>
          </div>
          <div className='flex w-max gap-2 relative right-12 hover:cursor-pointer hoverClass' onClick={()=>scrollWorkIntoView()}>
-               <img src="/assets/svg/scroll.svg" alt="scroll" width={'30'} />
+               <img src="https://dravasilis.github.io/my-portfolio/assets/svg/scroll.svg" alt="scroll" width={'30'} />
                <span className='text-teal-400 text-xl font-bold'>Take a look </span>
          </div>
       </div>

@@ -36,7 +36,7 @@ function MainView() {
     starsRef.current.style.transitionDuration = "1000ms";
     starsRef2.current.style.transitionDuration = "2500ms";
     routerLinkRef.current.style.transitionDuration = "2500ms";
-    setInterval(() => {
+    setTimeout(() => {
       if (!starsRef.current || !routerLinkRef.current) {
         return;
       }
@@ -45,7 +45,9 @@ function MainView() {
       routerLinkRef.current.style.opacity = "1";
       starsRef.current.style.marginLeft = "-100px";
 
-      setInterval(() => {
+      setTimeout(() => {
+        console.log(starsRef2);
+        
         if (!starsRef2.current) {
           return;
         }
@@ -120,7 +122,7 @@ function MainView() {
         horizontalProgressbarRef2.current.style.transform = "translateX(-100%)";
         // horizontalProgressbarRef2.current.style.rotate = "0deg !important";
         horizontalProgressbarRef2.current.style.width =
-          newHorizontalScrollValue * 1 + "px";
+          newHorizontalScrollValue * 1.5 + "px";
         horizontalProgressbarRef3.current.style.width =
           newHorizontalScrollValue * 1 + "px";
       }
@@ -136,7 +138,7 @@ function MainView() {
         <div ref={starsRef} className="image"></div>
         <img
           ref={starsRef2}
-          src="/assets/img/stars.jpg"
+          src="https://dravasilis.github.io/my-portfolio/assets/img/stars.jpg"
           alt="stars"
           className=" opacity-0 object-cover absolute   top-0 h-[50rem] w-full"
         />
@@ -167,7 +169,7 @@ function MainView() {
         ></div>
         <div className="flex flex-col pl-96 gap-96">
           <Introduction setScrollToWork={setScrollToWork} />
-          <div id="about-me">
+          <div id="about-me" >
             <AboutMe />
           </div>
           <div id="work">

@@ -58,17 +58,20 @@ function Work(){
             <span className='text-5xl text-teal-200 font-bold neon-sign-purple w-max rounded-xl p-4  '> &lt; Work / &gt;</span>
             <div className='flex flex-col gap-12 -ml-8'>
                {projects.map((project,index) =>(
-                  <div key={index} ref={el => projectRefs.current[index] = el} className={`fade-in   relative w-full flex items-center gap-2 p-4 z-[1] ${index===1? 'flex-row-reverse':''} `}>
-                     <span className={`absolute z-[1] title  glass text-white text-3xl  top-16 py-3 px-4 w-80 ${index===1? '-right-32':'-left-32'}`}>{project.name}</span>
+                  <div key={index} ref={el => projectRefs.current[index] = el} className={`fade-in flex-row max-mobile:flex-col  relative   flex items-center gap-2 p-4 z-[1] ${index===1? 'flex-row-reverse':''} `}>
+                    {/* label  */}
+                     <span className={`absolute z-[1] title  glass text-white text-3xl max-mobile:text-xl  top-16 py-3 px-4 w-80 max-mobile:w-60 ${index===1? '-right-32 max-mobile:right-0':'-left-32 max-mobile:left-0'}`}>{project.name}</span>
+                    {/* image  */}
                      <div className=' relative'>
                         <div className='projectImg-container'>
                            <img  src={project.img} alt="" className='rounded-xl ' />
                         </div>
                         <div className=' flex flex-col items-center justify-center py-3 text-white text-lg absolute bottom-0 glassSkills w-full neon-sign-purple'>
-                           <span className=' tracking-wider'>{project.skills}</span>
+                           <span className=' tracking-wider text-center'>{project.skills}</span>
                         </div>
                      </div>
-                     <div className='  text-white  glassDesc  flex items-center justify-center'></div>
+                     {/* line  */}
+                     <div className=' max-mobile:!h-20 max-mobile:!w-[1px] text-white  glassDesc  flex items-center justify-center'></div>
                      <span className=' description truncate whitespace-break-spaces bg-[#101010]'>{project.description}</span>
                   </div>
                ))}

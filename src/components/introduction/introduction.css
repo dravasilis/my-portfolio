@@ -83,6 +83,6 @@
     }
 }
 .textShadow{
-    text-shadow: 1px 6px 1rem #00e1ff;
-    color: #00f4ff;
+    text-shadow: -1px 2px 1rem #ffffff;
+    color: #8cfaff;
 }

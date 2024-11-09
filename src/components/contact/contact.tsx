@@ -6,7 +6,7 @@ interface contactProps {}
 function Contact() {
   return (
     <div className=" flex flex-col gap-12">
-      <span className="text-5xl text-teal-200 font-bold neon-sign-purple w-max rounded-xl -mt-14 p-4  ">
+      <span className="text-5xl max-mobile:text-4xl text-teal-200 font-bold neon-sign-purple w-max rounded-xl -mt-14 p-4  ">
         {" "}
         &lt; Contact / &gt;
       </span>

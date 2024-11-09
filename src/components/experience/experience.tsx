@@ -1,8 +1,6 @@
 import { useEffect, useRef } from "react";
 import "./experience.css";
 import { Timeline } from "../../models/timeline";
-import { log } from "console";
-
 function Experience() {
   const timestamps: Timeline[] = [
     {
@@ -51,11 +49,11 @@ function Experience() {
   }, []);
   return (
     <div className=" flex flex-col ">
-      <span className="text-5xl  text-teal-200 font-bold neon-sign-purple w-max rounded-xl -mt-[6.5rem] p-4  ">
+      <span className="text-5xl max-mobile:text-4xl  text-teal-200 font-bold neon-sign-purple w-max rounded-xl -mt-[6.5rem] p-4  ">
         {" "}
         &lt; Experience / &gt;
       </span>
-      <div className=" w-max  ml-[36rem] max-laptop:ml-[22rem] top-[3800px] max-tablet:top-[2900px] max-mobile:top-[4400px] absolute  flex flex-col gap-[20rem]">
+      <div className=" w-max  ml-[36rem] max-laptop:ml-[22rem] max-mobile:ml-[12rem] top-[3800px] max-tablet:top-[2900px] max-mobile:top-[225rem] absolute  flex flex-col gap-[20rem]">
         <span
           ref={yearLabelRef}
           className="neon-sign-purple opacity-0    text-white w-max py-4 px-12 duration-1000 z-[1] text-3xl bg-slate-900  rounded-xl"
@@ -75,14 +73,14 @@ function Experience() {
           2023
         </span>
       </div>
-      <div className=" flex flex-col gap-[20rem] py-[20rem] max-mobile:py-[25rem]">
+      <div className=" flex flex-col gap-[20rem] py-[20rem] max-mobile:py-[17rem]">
         {timestamps.map((timestamp, index) => (
           <div
             key={index}
             ref={(el) => (timestampRefs.current[index] = el)}
             className={`flex relative ${
               index === (1 || 3) ? " -right-[32rem] max-laptop:-right-[3rem]" : " max-laptop:w-[35rem]"
-            } bg-slate-900 z-[1] flex-col gap-2 items-center neon-sign-blue -ml-44 max-laptop:!ml-0 duration-1000 opacity-0 p-8 w-max rounded-2xl `}
+            } bg-slate-900 z-[1] flex-col gap-2 items-center neon-sign-blue -ml-44 max-laptop:!-ml-4 duration-1000 opacity-0 p-8 w-max rounded-2xl `}
           >
             <span className="text-white text-xl">{timestamp.description}</span>
           </div>

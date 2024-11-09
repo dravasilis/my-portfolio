@@ -60,7 +60,7 @@ function Work(){
                {projects.map((project,index) =>(
                   <div key={index} ref={el => projectRefs.current[index] = el} className={`fade-in flex-row max-mobile:flex-col  relative   flex items-center gap-2 p-4 z-[1] ${index===1? 'flex-row-reverse':''} `}>
                     {/* label  */}
-                     <span className={`absolute z-[1] title  glass text-white text-3xl max-mobile:text-xl  top-16 py-3 px-4 w-80 max-mobile:w-60 ${index===1? '-right-32 max-mobile:right-4':'-left-32 max-mobile:left-0'}`}>{project.name}</span>
+                     <span className={`absolute z-[1] title  glass text-white text-3xl max-mobile:text-xl  top-16 py-3 px-4 w-80 max-mobile:w-60 ${index===1? 'right-[13rem] max-mobile:right-4':'-left-32 max-mobile:left-0'}`}>{project.name}</span>
                     {/* image  */}
                      <div className=' relative'>
                         <div className='projectImg-container'>

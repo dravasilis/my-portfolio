@@ -55,7 +55,7 @@ function Experience() {
         {" "}
         &lt; Experience / &gt;
       </span>
-      <div className=" w-max  ml-[36rem] max-laptop:ml-[22rem] top-[3800px] max-tablet:top-[3600px] max-mobile:top-[4400px] absolute  flex flex-col gap-[20rem]">
+      <div className=" w-max  ml-[36rem] max-laptop:ml-[22rem] top-[3800px] max-tablet:top-[2900px] max-mobile:top-[4400px] absolute  flex flex-col gap-[20rem]">
         <span
           ref={yearLabelRef}
           className="neon-sign-purple opacity-0    text-white w-max py-4 px-12 duration-1000 z-[1] text-3xl bg-slate-900  rounded-xl"
@@ -64,7 +64,7 @@ function Experience() {
         </span>
         <span
           ref={yearLabelRef2}
-          className="neon-sign-purple opacity-0   text-white w-max py-4 px-12 duration-1000 z-[1] text-3xl bg-slate-900  rounded-xl"
+          className="neon-sign-purple opacity-0     text-white w-max py-4 px-12 duration-1000 z-[1] text-3xl bg-slate-900  rounded-xl"
         >
           2021
         </span>

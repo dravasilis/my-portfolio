@@ -11,7 +11,7 @@ function Contact() {
         &lt; Contact / &gt;
       </span>
 
-      <div className="removePadding flex w-full items-center justify-center">
+      <div className=" flex w-full items-center justify-center">
         <NeonForm />
       </div>
     </div>

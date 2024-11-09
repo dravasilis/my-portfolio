@@ -57,11 +57,11 @@ function MainView() {
   window.addEventListener("scroll", () => {
     const scrollValue = document.documentElement.scrollTop;  
     const maxVerticalHeight = (window.innerWidth >870 && window.innerWidth <1235) ?3005 :window.innerWidth >1235?3655
-    : 3705; // Maximum height for the vertical bar 
+    : window.innerWidth <680 ? 4125 : 3705; // Maximum height for the vertical bar 
     
     const maxHorizontalWidth = 720; // 45rem in pixels
     const maxVerticalHeight2 = (window.innerWidth<1235 && window.innerWidth>870)  ? 4460:
-    window.innerWidth < 870 ? 5200 :5500; // Example value for second vertical line
+   ( window.innerWidth < 870 && window.innerWidth >680) ? 5200 :window.innerWidth < 680?5700:5500; // Example value for second vertical line
     const maxHorizontalWidthNew = window.innerWidth; // Example value for new horizontal lines
     const verticalThresholdScroll = maxVerticalHeight / 1.2;
     const secondVerticalThresholdScroll = maxVerticalHeight2 / 1.2;
@@ -151,19 +151,19 @@ function MainView() {
       >
         <div
           ref={verticalProgressbarRef}
-          className="min-h-[25rem] max-h-[3610px]  max-tablet:max-h-[2750px] max-mobile:max-h-[3450px] setOverflow  absolute ml-80 max-mobile:ml-[3rem] max-tablet:ml-[15rem]  p-[2px] z-0 rounded-3xl bg-myTeal glow"
+          className="min-h-[25rem] max-h-[3610px]  max-tablet:max-h-[2750px] max-mobile:max-h-[3450px] max-mobileXS:max-h-[245rem] setOverflow  absolute ml-80 max-mobile:ml-[3rem] max-tablet:ml-[15rem]  p-[2px] z-0 rounded-3xl bg-myTeal glow"
         ></div>
         <div
           ref={horizontalProgressbarRef}
-          className="absolute max-w-[45rem] max-laptop:!max-w-[32rem] max-mobile:!max-w-[20rem] ml-80  max-mobile:ml-[3rem] max-tablet:ml-[15rem] top-[3655px]  max-tablet:top-[2800px] max-mobile:top-[218.5rem]  p-[2px] z-0 rounded-3xl bg-myTeal glow"
+          className="absolute max-w-[45rem] max-laptop:!max-w-[32rem] max-mobile:!max-w-[20rem] max-mobileXS:!max-w-[18.5rem]   ml-80  max-mobile:ml-[3rem] max-tablet:ml-[15rem] top-[3655px]  max-tablet:top-[2800px] max-mobile:top-[218.5rem] max-mobileXS:top-[248rem]  p-[2px] z-0 rounded-3xl bg-myTeal glow"
         ></div>
         <div
           ref={verticalProgressbarRef2}
-          className="absolute max-h-[1848px] max-tablet:max-h-[1600px] max-mobile:max-h-[1520px] ml-[65rem] max-laptop:!ml-[52rem] max-tablet:!ml-[47rem] max-mobile:!ml-[23rem] top-[3655px] max-tablet:!top-[2800px] max-mobile:!top-[218.5rem]   p-[2px] z-0 rounded-3xl bg-myTeal glow"
+          className="absolute max-h-[1848px] max-tablet:max-h-[1600px] max-mobile:max-h-[1520px] max-mobileXS:max-h-[1400px] ml-[65rem] max-laptop:!ml-[52rem] max-tablet:!ml-[47rem] max-mobile:!ml-[23rem] max-mobileXS:!ml-[21.5rem] top-[3655px] max-tablet:!top-[2800px] max-mobile:!top-[218.5rem] max-mobileXS:!top-[248rem]   p-[2px] z-0 rounded-3xl bg-myTeal glow"
         ></div>
         <div
           ref={horizontalProgressbarRef2}
-          className="absolute ml-[65rem] max-laptop:ml-[52rem] max-tablet:ml-[47.2rem] max-mobile:ml-[23.2rem] top-[5500px] max-tablet:top-[4400px] max-mobile:top-[313.25rem]  p-[2px] z-0 rounded-3xl bg-myTeal glow"
+          className="absolute ml-[65rem] max-laptop:ml-[52rem] max-tablet:ml-[47.2rem] max-mobile:ml-[23.2rem] max-mobileXS:ml-[21.75rem] top-[5500px] max-tablet:top-[4400px] max-mobile:top-[313.25rem] max-mobileXS:top-[335.25rem]  p-[2px] z-0 rounded-3xl bg-myTeal glow"
         ></div>
         <div className="flex flex-col pl-96 max-mobile:pl-[5rem] max-mobile:mt-4 max-tablet:pl-[19rem] gap-96 max-tablet:gap-40">
           <Introduction setScrollToWork={setScrollToWork} />

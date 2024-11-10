@@ -9,7 +9,8 @@ module.exports = {
         laptop:'1400px',
         tablet:'1235px',
         mobile: '870px',
-        mobileXS: '680px'
+        mobileXS: '680px',
+        mobileXXS: '580px'
       },
       colors:{
         myTeal: '#5eead4'

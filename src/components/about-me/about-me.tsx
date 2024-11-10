@@ -3,7 +3,7 @@ import '../main-view/Main-View.css'
 function AboutMe(){
    return(
       <div className=" flex flex-col max-mobileXS:items-center gap-16">
-            <span className='text-5xl max-mobile:text-4xl    text-teal-200 font-bold neon-sign-purple w-max rounded-xl p-4  '> &lt; About me / &gt;</span>
+            <span className='text-5xl max-mobile:text-4xl max-[430px]:text-[2rem] max-[430px]:p-3    text-teal-200 font-bold neon-sign-purple w-max rounded-xl p-4  '> &lt; About me / &gt;</span>
             <div className=" flex   !flex-row items-center reflection max-mobileXS:w-max max-mobileXS:!flex-col-reverse max-mobileXS:items-baseline ">
               {/* text */} 
                <span className="w-[40rem] max-mobileXS:w-[17rem] max-mobileXS:text-lg  text-xl max-tablet:text-[1.05rem] leading-8   tracking-wider neon-sign-blue max-tablet:p-6 p-8 bg-slate-900 rounded-3xl text-glow-blue text-white">I am a programmer and more specifically i develop websites and applications. What drives me is the continuous urge for knowledge and always setting myself against challenges that will make me a better developer.</span>

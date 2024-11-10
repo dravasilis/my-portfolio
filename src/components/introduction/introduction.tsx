@@ -6,7 +6,7 @@ import './introduction.css'
 
 function Introduction({setScrollToWork}:IntroductionProps){
    const scrollWorkIntoView =() =>{
-      document.querySelector('#work')?.scrollIntoView({
+      document.querySelector('#about-me')?.scrollIntoView({
          behavior: 'smooth'
       })
    }

@@ -55,7 +55,7 @@ function Work(){
 }, []);
    return(
       <div className='flex flex-col gap-24 max-[650px]:items-center'>
-            <span className='text-5xl max-mobile:text-4xl   text-teal-200 font-bold neon-sign-purple w-max rounded-xl p-4  '> &lt; Work / &gt;</span>
+            <span className='text-5xl max-mobile:text-4xl max-[430px]:text-[2rem] max-[430px]:p-3  text-teal-200 font-bold neon-sign-purple w-max rounded-xl p-4  '> &lt; Work / &gt;</span>
             <div className='flex flex-col gap-12 -ml-8'>
                {projects.map((project,index) =>(
                   <div key={index} ref={el => projectRefs.current[index] = el} className={`fade-in flex-row max-mobile:flex-col  relative   flex items-center gap-2 p-4 z-[1] ${index===1? 'flex-row-reverse':''} `}>

@@ -49,11 +49,11 @@ function Experience() {
   }, []);
   return (
     <div className=" flex flex-col ">
-      <span className="text-5xl max-mobile:text-4xl    text-teal-200 font-bold neon-sign-purple w-max rounded-xl -mt-[6.5rem] p-4  ">
+      <span className="text-5xl max-mobile:text-4xl  max-[430px]:text-[2rem] max-[430px]:p-3  text-teal-200 font-bold neon-sign-purple w-max rounded-xl -mt-[6.5rem] p-4  ">
         {" "}
         &lt; Experience / &gt;
       </span>
-      <div className=" w-max  ml-[36rem] max-laptop:ml-[22rem] max-mobile:ml-[12rem] max-mobileXS:ml-[11rem] top-[3800px] max-tablet:top-[2900px] max-mobile:top-[225rem] max-mobileXS:top-[251rem] absolute  flex flex-col gap-[20rem]">
+      <div className=" w-max  ml-[36rem] max-laptop:ml-[22rem] max-mobile:ml-[12rem] max-mobileXS:ml-[11rem] max-mobileXXS:ml-[7rem] top-[3800px] max-tablet:top-[2900px] max-mobile:top-[225rem] max-mobileXS:top-[251rem] absolute  flex flex-col gap-[20rem]">
         <span
           ref={yearLabelRef}
           className="neon-sign-purple opacity-0    text-white w-max py-4 px-12 duration-1000 z-[1] text-3xl bg-slate-900  rounded-xl"

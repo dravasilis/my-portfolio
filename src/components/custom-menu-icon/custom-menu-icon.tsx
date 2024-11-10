@@ -16,13 +16,13 @@ function CustomMenuIcon({ handleClick, isMenuOpen }: CustomMenuIconProps) {
       return;
     }
     menuIconRef.current.style.transitionDuration = "1500ms";
-    setInterval(() => {
+    setTimeout(() => {
       if (!menuIconRef.current) {
         return;
       }
       menuIconRef.current.style.top = "2rem";
       menuIconRef.current.style.right = "5%";
-    }, 1000);
+    }, 2000);
 
     if (isMenuOpen) {
       if (

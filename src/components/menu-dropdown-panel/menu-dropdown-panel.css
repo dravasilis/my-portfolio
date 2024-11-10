@@ -11,6 +11,17 @@
     padding-left: 2rem;
     padding-right: 2rem;
  } 
+ @media screen and (max-width:1235px) {
+   .tabs{
+      font-size: 2rem;
+   }
+ }
+ @media screen and (max-width:870px) {
+   .tabs{
+      font-size: 1.75rem;
+      padding: 0.5rem 1rem;
+   }
+ }
  .tabs:hover{
     background-color: rgba(255, 255, 255, 0.699);
     color:rgb(17 94 89);

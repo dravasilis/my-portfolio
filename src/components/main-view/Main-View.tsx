@@ -45,11 +45,8 @@ function MainView() {
       starsRef.current.style.marginLeft = "-100px";
 
       setTimeout(() => {
-        if (!starsRef2.current) {
-          return;
-        }
-        starsRef2.current.style.opacity = "0.3";
-        starsRef2.current.style.marginLeft = "0px";
+        starsRef2.current && (starsRef2.current.style.opacity = "0.3");
+        starsRef2.current && (starsRef2.current.style.marginLeft = "0px");
       }, 100);
     }, 1000);
   }, []);
@@ -70,64 +67,34 @@ function MainView() {
     verticalProgressbarRef2.current &&( verticalProgressbarRef2.current.style.opacity = '0')
     horizontalProgressbarRef.current && ( horizontalProgressbarRef.current.style.opacity = '0')
     if (scrollValue <= verticalThresholdScroll) {
-      if (
-        verticalProgressbarRef.current &&
-        horizontalProgressbarRef.current &&
-        verticalProgressbarRef2.current
-      ) {
-        verticalProgressbarRef.current.style.height = scrollValue * 1.2 + "px";
-        horizontalProgressbarRef.current.style.width = "0px";
-        verticalProgressbarRef2.current.style.height = "0px";
-      }
-    } else if (scrollValue <= horizontalThresholdScroll) {
-      if (
-        verticalProgressbarRef.current &&
-        horizontalProgressbarRef.current &&
-        verticalProgressbarRef2.current
-      ) {
+        verticalProgressbarRef.current && (verticalProgressbarRef.current.style.height = scrollValue * 1.2 + "px");
+        horizontalProgressbarRef.current && (horizontalProgressbarRef.current.style.width = "0px");
+        verticalProgressbarRef2.current && (verticalProgressbarRef2.current.style.height = "0px");
+    } 
+    else if (scrollValue <= horizontalThresholdScroll) {
       horizontalProgressbarRef.current && ( horizontalProgressbarRef.current.style.opacity = '1')
-      verticalProgressbarRef.current.style.height = maxVerticalHeight + "px";
-        horizontalProgressbarRef.current.style.width =
-          (scrollValue - verticalThresholdScroll) * 1.9 + "px";
-        verticalProgressbarRef2.current.style.height = "0px";
-      }
-    } else if (scrollValue <= secondVerticalThresholdScroll) {
-      if (
-        verticalProgressbarRef.current &&
-        horizontalProgressbarRef.current &&
-        verticalProgressbarRef2.current
-      ) {
+      verticalProgressbarRef.current && (verticalProgressbarRef.current.style.height = maxVerticalHeight + "px");
+      horizontalProgressbarRef.current &&(horizontalProgressbarRef.current.style.width =  (scrollValue - verticalThresholdScroll) * 1.9 + "px");
+      verticalProgressbarRef2.current &&  (verticalProgressbarRef2.current.style.height = "0px");
+    } 
+    else if (scrollValue <= secondVerticalThresholdScroll) {
       horizontalProgressbarRef.current && ( horizontalProgressbarRef.current.style.opacity = '1')
-      verticalProgressbarRef2.current.style.opacity = '1';
-        verticalProgressbarRef.current.style.height = maxVerticalHeight + "px";
-        horizontalProgressbarRef.current.style.width =
-          maxHorizontalWidth + "px";
-        verticalProgressbarRef2.current.style.height =
-          (scrollValue - horizontalThresholdScroll) * 1.9 + "px";
-      }
-    } else {
+       verticalProgressbarRef2.current && (verticalProgressbarRef2.current.style.opacity = '1');
+      verticalProgressbarRef.current &&(verticalProgressbarRef.current.style.height = maxVerticalHeight + "px");
+      horizontalProgressbarRef.current && (horizontalProgressbarRef.current.style.width = maxHorizontalWidth + "px");
+       verticalProgressbarRef2.current && (verticalProgressbarRef2.current.style.height =  (scrollValue - horizontalThresholdScroll) * 1.9 + "px");
+    } 
+    else {
       // New condition for additional horizontal lines
-      if (
-        verticalProgressbarRef.current &&
-        horizontalProgressbarRef.current &&
-        verticalProgressbarRef2.current &&
-        horizontalProgressbarRef2.current  
-      ) {
-        verticalProgressbarRef.current.style.height = maxVerticalHeight + "px";
-        horizontalProgressbarRef.current.style.width =
-          maxHorizontalWidthNew + "px";
-        verticalProgressbarRef2.current.style.height =
-          maxVerticalHeight2 + "px";
-        verticalProgressbarRef2.current.style.opacity = '1';
-        horizontalProgressbarRef2.current.style.opacity = '1'
-        const newHorizontalScrollValue =
-          scrollValue - secondVerticalThresholdScroll;
-        horizontalProgressbarRef2.current.style.transform = "translateX(-100%)";
-        // horizontalProgressbarRef2.current.style.rotate = "0deg !important";
-        horizontalProgressbarRef2.current.style.width =
-          newHorizontalScrollValue * 1.5 + "px";
+        verticalProgressbarRef.current && (verticalProgressbarRef.current.style.height = maxVerticalHeight + "px")
+        horizontalProgressbarRef.current && (horizontalProgressbarRef.current.style.width =  maxHorizontalWidthNew + "px");
+        verticalProgressbarRef2.current && (verticalProgressbarRef2.current.style.height =  maxVerticalHeight2 + "px");
+        verticalProgressbarRef2.current && (verticalProgressbarRef2.current.style.opacity = '1');
+        const newHorizontalScrollValue = scrollValue - secondVerticalThresholdScroll;
+        horizontalProgressbarRef2.current  && (horizontalProgressbarRef2.current.style.opacity = '1')
+        horizontalProgressbarRef2.current  && (horizontalProgressbarRef2.current.style.transform = "translateX(-100%)");
+        horizontalProgressbarRef2.current  && ( horizontalProgressbarRef2.current.style.width =  newHorizontalScrollValue * 1.5 + "px")
          
-      }
     }
   });
 

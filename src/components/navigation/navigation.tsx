@@ -15,17 +15,12 @@ function Navigation({ isMenuOpen, setIsMenuOpen }: NavigationProps){
 
    // let [isMenuOpen,setIsMenuOpen] = useState(false)
    useEffect(()=>{
-      if( !nameRef.current){return}
-      nameRef.current.style.transitionDuration = '1500ms';
-      setInterval(()=>{
+      setTimeout(()=>{
          if( !nameRef.current   ){return}
+         nameRef.current.style.transitionDuration = '1500ms';
          nameRef.current.style.top = '2rem'
          nameRef.current.style.left = '5%'
-         setInterval(()=>{
-         if( !nameRef.current ){return}
-            nameRef.current.style.transitionDuration = '250ms'
-         },150)
-   },1000)
+   },2000)
 
    },[])
    const handleMenu = () => {

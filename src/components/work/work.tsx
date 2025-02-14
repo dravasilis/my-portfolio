@@ -24,7 +24,7 @@ function Work() {
       name: "Admin Business Software.",
       description:
         "This app is designed to connect multiple units of a business to a central organization and manage their staff and their activities as well as their tasks and goals.",
-      img: "https://dravasilis.github.io/my-portfolio/assets/img/LB.png",
+      img: "https://dravasilis.github.io/my-portfolio/assets/img/admin1.png",
       skills: "Frontend Development, Angular, RxJS, Typescript, HTTP Client",
     },
   ];

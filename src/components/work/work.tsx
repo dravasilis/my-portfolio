@@ -6,11 +6,11 @@ import "./../../../src/index.css";
 function Work() {
   const projects: Project[] = [
     {
-      name: "Movie Database Application",
+      name: "Video Game Platform",
       description:
-        "Movie application IMDB clone, with API integration providing information about movies, tv shows and video games.",
-      img: "https://dravasilis.github.io/my-portfolio/assets/img/movie-app.png",
-      skills: "Frontend Development, React,API, Typescript, Http Client",
+        "Videogame Platform, with API integration providing information about games, platforms and developers.",
+      img: "https://dravasilis.github.io/my-portfolio/assets/img/videogame-platform.png",
+      skills: "Frontend Development, NextJS,API, Typescript, CSS, HTML",
     },
     {
       name: "Admin Customer Rewards App",

@@ -1,20 +1,11 @@
 import { useEffect, useRef, useState } from "react";
-import "./Main-View.css";
-import Navigation from "../navigation/navigation";
-import {
-  BrowserRouter,
-  Navigate,
-  Route,
-  Routes,
-  useNavigate,
-} from "react-router-dom";
-import Home from "../introduction/introduction";
-import Introduction from "../introduction/introduction";
-import Work from "../work/work";
-import Experience from "../experience/experience";
-import { verify } from "crypto";
 import AboutMe from "../about-me/about-me";
 import Contact from "../contact/contact";
+import Experience from "../experience/experience";
+import Introduction from "../introduction/introduction";
+import Navigation from "../navigation/navigation";
+import Work from "../work/work";
+import "./Main-View.css";
 
 function MainView() {
   const starsRef = useRef<HTMLImageElement>(null);
@@ -28,18 +19,25 @@ function MainView() {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State lifted to parent
   const [scrollToWork, setScrollToWork] = useState(false); // State lifted to parent
   useEffect(() => {
-    if (!starsRef.current || !starsRef2.current || !routerLinkRef.current || !horizontalProgressbarRef2.current  || !verticalProgressbarRef2.current) {
+    if (
+      !starsRef.current ||
+      !starsRef2.current ||
+      !routerLinkRef.current ||
+      !horizontalProgressbarRef2.current ||
+      !verticalProgressbarRef2.current
+    ) {
       return;
     }
     starsRef.current.style.transitionDuration = "1000ms";
     starsRef2.current.style.transitionDuration = "2500ms";
     routerLinkRef.current.style.transitionDuration = "2500ms";
-    
-      setTimeout(() => {
+
+    setTimeout(() => {
       if (!starsRef.current || !routerLinkRef.current) {
         return;
       }
-      routerLinkRef.current.style.bottom = window.innerWidth <1235 ? '43rem' : '33rem';
+      routerLinkRef.current.style.bottom =
+        window.innerWidth < 1235 ? "43rem" : "33rem";
       starsRef.current.style.opacity = "0.7";
       routerLinkRef.current.style.opacity = "1";
       starsRef.current.style.marginLeft = "-100px";
@@ -52,49 +50,92 @@ function MainView() {
   }, []);
 
   window.addEventListener("scroll", () => {
-    const scrollValue = document.documentElement.scrollTop;  
-    const maxVerticalHeight = (window.innerWidth >870 && window.innerWidth <1235) ?3005 :window.innerWidth >1235?3655
-    : window.innerWidth <680 ? 4125 : 3705; // Maximum height for the vertical bar 
-    
+    const scrollValue = document.documentElement.scrollTop;
+    const maxVerticalHeight =
+      window.innerWidth > 870 && window.innerWidth < 1235
+        ? 3005
+        : window.innerWidth > 1235
+        ? 3655
+        : window.innerWidth < 680
+        ? 4125
+        : 3705; // Maximum height for the vertical bar
+
     const maxHorizontalWidth = 720; // 45rem in pixels
-    const maxVerticalHeight2 = (window.innerWidth<1235 && window.innerWidth>870)  ? 4460:
-   ( window.innerWidth < 870 && window.innerWidth >680) ? 5200 :window.innerWidth < 680?5700:5500; // Example value for second vertical line
+    const maxVerticalHeight2 =
+      window.innerWidth < 1235 && window.innerWidth > 870
+        ? 4460
+        : window.innerWidth < 870 && window.innerWidth > 680
+        ? 5200
+        : window.innerWidth < 680
+        ? 5700
+        : 5500; // Example value for second vertical line
     const maxHorizontalWidthNew = window.innerWidth; // Example value for new horizontal lines
     const verticalThresholdScroll = maxVerticalHeight / 1.2;
     const secondVerticalThresholdScroll = maxVerticalHeight2 / 1.2;
-    const horizontalThresholdScroll = verticalThresholdScroll + maxHorizontalWidth / 2;
-    horizontalProgressbarRef2.current && (horizontalProgressbarRef2.current.style.opacity = '0')
-    verticalProgressbarRef2.current &&( verticalProgressbarRef2.current.style.opacity = '0')
-    horizontalProgressbarRef.current && ( horizontalProgressbarRef.current.style.opacity = '0')
+    const horizontalThresholdScroll =
+      verticalThresholdScroll + maxHorizontalWidth / 2;
+    horizontalProgressbarRef2.current &&
+      (horizontalProgressbarRef2.current.style.opacity = "0");
+    verticalProgressbarRef2.current &&
+      (verticalProgressbarRef2.current.style.opacity = "0");
+    horizontalProgressbarRef.current &&
+      (horizontalProgressbarRef.current.style.opacity = "0");
     if (scrollValue <= verticalThresholdScroll) {
-        verticalProgressbarRef.current && (verticalProgressbarRef.current.style.height = scrollValue * 1.2 + "px");
-        horizontalProgressbarRef.current && (horizontalProgressbarRef.current.style.width = "0px");
-        verticalProgressbarRef2.current && (verticalProgressbarRef2.current.style.height = "0px");
-    } 
-    else if (scrollValue <= horizontalThresholdScroll) {
-      horizontalProgressbarRef.current && ( horizontalProgressbarRef.current.style.opacity = '1')
-      verticalProgressbarRef.current && (verticalProgressbarRef.current.style.height = maxVerticalHeight + "px");
-      horizontalProgressbarRef.current &&(horizontalProgressbarRef.current.style.width =  (scrollValue - verticalThresholdScroll) * 1.9 + "px");
-      verticalProgressbarRef2.current &&  (verticalProgressbarRef2.current.style.height = "0px");
-    } 
-    else if (scrollValue <= secondVerticalThresholdScroll) {
-      horizontalProgressbarRef.current && ( horizontalProgressbarRef.current.style.opacity = '1')
-       verticalProgressbarRef2.current && (verticalProgressbarRef2.current.style.opacity = '1');
-      verticalProgressbarRef.current &&(verticalProgressbarRef.current.style.height = maxVerticalHeight + "px");
-      horizontalProgressbarRef.current && (horizontalProgressbarRef.current.style.width = maxHorizontalWidth + "px");
-       verticalProgressbarRef2.current && (verticalProgressbarRef2.current.style.height =  (scrollValue - horizontalThresholdScroll) * 1.9 + "px");
-    } 
-    else {
+      verticalProgressbarRef.current &&
+        (verticalProgressbarRef.current.style.height =
+          scrollValue * 1.2 + "px");
+      horizontalProgressbarRef.current &&
+        (horizontalProgressbarRef.current.style.width = "0px");
+      verticalProgressbarRef2.current &&
+        (verticalProgressbarRef2.current.style.height = "0px");
+    } else if (scrollValue <= horizontalThresholdScroll) {
+      horizontalProgressbarRef.current &&
+        (horizontalProgressbarRef.current.style.opacity = "1");
+      verticalProgressbarRef.current &&
+        (verticalProgressbarRef.current.style.height =
+          maxVerticalHeight + "px");
+      horizontalProgressbarRef.current &&
+        (horizontalProgressbarRef.current.style.width =
+          (scrollValue - verticalThresholdScroll) * 1.9 + "px");
+      verticalProgressbarRef2.current &&
+        (verticalProgressbarRef2.current.style.height = "0px");
+    } else if (scrollValue <= secondVerticalThresholdScroll) {
+      horizontalProgressbarRef.current &&
+        (horizontalProgressbarRef.current.style.opacity = "1");
+      verticalProgressbarRef2.current &&
+        (verticalProgressbarRef2.current.style.opacity = "1");
+      verticalProgressbarRef.current &&
+        (verticalProgressbarRef.current.style.height =
+          maxVerticalHeight + "px");
+      horizontalProgressbarRef.current &&
+        (horizontalProgressbarRef.current.style.width =
+          maxHorizontalWidth + "px");
+      verticalProgressbarRef2.current &&
+        (verticalProgressbarRef2.current.style.height =
+          (scrollValue - horizontalThresholdScroll) * 1.9 + "px");
+    } else {
       // New condition for additional horizontal lines
-        verticalProgressbarRef.current && (verticalProgressbarRef.current.style.height = maxVerticalHeight + "px")
-        horizontalProgressbarRef.current && (horizontalProgressbarRef.current.style.width =  maxHorizontalWidthNew + "px");
-        verticalProgressbarRef2.current && (verticalProgressbarRef2.current.style.height =  maxVerticalHeight2 + "px");
-        verticalProgressbarRef2.current && (verticalProgressbarRef2.current.style.opacity = '1');
-        const newHorizontalScrollValue = scrollValue - secondVerticalThresholdScroll;
-        horizontalProgressbarRef2.current  && (horizontalProgressbarRef2.current.style.opacity = '1')
-        horizontalProgressbarRef2.current  && (horizontalProgressbarRef2.current.style.transform = "translateX(-100%)");
-        horizontalProgressbarRef2.current  && ( horizontalProgressbarRef2.current.style.width =  newHorizontalScrollValue * 1.5 + "px")
-         
+      verticalProgressbarRef.current &&
+        (verticalProgressbarRef.current.style.height =
+          maxVerticalHeight + "px");
+      horizontalProgressbarRef.current &&
+        (horizontalProgressbarRef.current.style.width =
+          maxHorizontalWidthNew + "px");
+      verticalProgressbarRef2.current &&
+        (verticalProgressbarRef2.current.style.height =
+          maxVerticalHeight2 + "px");
+      verticalProgressbarRef2.current &&
+        (verticalProgressbarRef2.current.style.opacity = "1");
+      const newHorizontalScrollValue =
+        scrollValue - secondVerticalThresholdScroll;
+      horizontalProgressbarRef2.current &&
+        (horizontalProgressbarRef2.current.style.opacity = "1");
+      horizontalProgressbarRef2.current &&
+        (horizontalProgressbarRef2.current.style.transform =
+          "translateX(-100%)");
+      horizontalProgressbarRef2.current &&
+        (horizontalProgressbarRef2.current.style.width =
+          newHorizontalScrollValue * 1.5 + "px");
     }
   });
 
@@ -134,7 +175,7 @@ function MainView() {
         ></div>
         <div className="flex flex-col pl-96 max-mobile:pl-[5rem] max-mobile:mt-4 max-tablet:pl-[19rem] gap-96 max-tablet:gap-40">
           <Introduction setScrollToWork={setScrollToWork} />
-          <div id="about-me" >
+          <div id="about-me">
             <AboutMe />
           </div>
           <div id="work">

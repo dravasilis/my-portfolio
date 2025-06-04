@@ -34,7 +34,7 @@ function MenuDropdownPanel({
       className="panelGlass  absolute -top-[100vh] left-0  duration-500 w-[100vw] h-[100vh]"
     >
       <div className="w-full h-full flex  items-center justify-around max-[1450px]:gap-[12rem] max-mobileXS:flex-col-reverse max-mobileXS:justify-center max-mobileXS:gap-16">
-        <div className="flex flex-col gap-8 max-mobile:ml-4  w-24 max-mobileXS:w-auto">
+        <div className="flex flex-col gap-8  w-24 max-mobileXS:gap-4 max-mobileXS:w-auto">
           <button
             onClick={() => {
               setIsMenuOpen(false);

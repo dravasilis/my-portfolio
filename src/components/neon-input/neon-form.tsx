@@ -1,7 +1,7 @@
-import React, { useRef, useState } from "react";
-import "./neon-form.css";
 import emailjs from "@emailjs/browser";
+import React, { useState } from "react";
 import Snackbar from "../snackbar/snackbar";
+import "./neon-form.css";
 
 function NeonForm() {
   const [email, setEmail] = useState("");

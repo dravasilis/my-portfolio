@@ -35,51 +35,50 @@ function MenuDropdownPanel({
     >
       <div className="w-full h-full flex  items-center justify-around max-[1450px]:gap-[12rem] max-mobileXS:flex-col-reverse max-mobileXS:justify-center max-mobileXS:gap-16">
         <div className="flex flex-col gap-8 max-mobile:ml-4  w-24 max-mobileXS:w-auto">
-          <a
+          <button
             onClick={() => {
               setIsMenuOpen(false);
+              document
+                .getElementById("work")
+                ?.scrollIntoView({ behavior: "smooth" });
             }}
             className="tabs"
-            href=""
-          >
-            &lt; Home /&gt;
-          </a>
-          <a
-            onClick={() => {
-              setIsMenuOpen(false);
-            }}
-            className="tabs"
-            href=""
           >
             &lt; Work /&gt;
-          </a>
-          <a
+          </button>
+          <button
             onClick={() => {
               setIsMenuOpen(false);
+              document
+                .getElementById("experience")
+                ?.scrollIntoView({ behavior: "smooth" });
             }}
             className="tabs"
-            href=""
           >
             &lt; Experience /&gt;
-          </a>
-          <a
+          </button>
+          <button
             onClick={() => {
               setIsMenuOpen(false);
+              document
+                .getElementById("about-me")
+                ?.scrollIntoView({ behavior: "smooth" });
             }}
             className="tabs"
-            href=""
           >
             &lt; About Me /&gt;
-          </a>
-          <a
+          </button>
+          <button
             onClick={() => {
               setIsMenuOpen(false);
+              document
+                .getElementById("contact")
+                ?.scrollIntoView({ behavior: "smooth" });
             }}
             className="tabs"
-            href=""
           >
             &lt; Contact /&gt;
-          </a>
+          </button>
         </div>
         <div className="flex flex-col gap-16 w-[30rem]  max-mobileXS:items-center max-mobileXS:gap-6">
           <span className=" text-5xl max-mobile:text-[2rem] font-bold text-white">

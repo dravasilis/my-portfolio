@@ -2,6 +2,7 @@ import emailjs from "@emailjs/browser";
 import React, { useState } from "react";
 import Snackbar from "../snackbar/snackbar";
 import "./neon-form.css";
+import { environment } from "../../env/environment";
 
 function NeonForm() {
   const [email, setEmail] = useState("");
@@ -14,9 +15,14 @@ function NeonForm() {
       return;
     }
     emailjs
-      .sendForm("service_sx8ml3x", "template_93c7r3o", form.currentTarget, {
-        publicKey: "HI8mniYBvI3ShYrAv",
-      })
+      .sendForm(
+        environment.serviceId,
+        environment.templateId,
+        form.currentTarget,
+        {
+          publicKey: environment.publicKey,
+        }
+      )
       .then(
         () => {
           setEmail("");

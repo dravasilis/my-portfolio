@@ -1,9 +1,7 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import CustomMenuIcon from "../custom-menu-icon/custom-menu-icon";
-import "./navigation.css";
 import MenuDropdownPanel from "../menu-dropdown-panel/menu-dropdown-panel";
-import { Link, Route, Routes } from "react-router-dom";
-import MainView from "../main-view/Main-View";
+import "./navigation.css";
 
 type NavigationProps = {
   isMenuOpen: boolean;

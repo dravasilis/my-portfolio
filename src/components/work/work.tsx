@@ -1,8 +1,7 @@
-import { useRef, useEffect } from "react";
-import "./work.css";
+import { useEffect, useRef } from "react";
 import { Project } from "../../models/project";
-import { log } from "console";
 import "./../../../src/index.css";
+import "./work.css";
 function Work() {
   const projects: Project[] = [
     {

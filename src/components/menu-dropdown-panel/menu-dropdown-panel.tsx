@@ -1,7 +1,5 @@
 import { useEffect, useRef } from "react";
 import "./menu-dropdown-panel.css";
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
-import MainView from "../main-view/Main-View";
 type MenuDropdownPanelProps = {
   isMenuOpen: boolean;
   setIsMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
@@ -36,6 +34,7 @@ function MenuDropdownPanel({
       <div className="w-full h-full flex  items-center justify-around max-[1450px]:gap-[12rem] max-mobileXS:flex-col-reverse max-mobileXS:justify-center max-mobileXS:gap-16">
         <div className="flex flex-col gap-8  w-24 max-mobileXS:gap-4 max-mobileXS:w-auto">
           <button
+            type="button"
             onClick={() => {
               setIsMenuOpen(false);
               document
@@ -47,6 +46,7 @@ function MenuDropdownPanel({
             &lt; Work /&gt;
           </button>
           <button
+            type="button"
             onClick={() => {
               setIsMenuOpen(false);
               document
@@ -58,6 +58,7 @@ function MenuDropdownPanel({
             &lt; Experience /&gt;
           </button>
           <button
+            type="button"
             onClick={() => {
               setIsMenuOpen(false);
               document
@@ -69,6 +70,7 @@ function MenuDropdownPanel({
             &lt; About Me /&gt;
           </button>
           <button
+            type="button"
             onClick={() => {
               setIsMenuOpen(false);
               document

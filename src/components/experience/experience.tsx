@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
-import "./experience.css";
 import { Timeline } from "../../models/timeline";
+import "./experience.css";
 function Experience() {
   const timestamps: Timeline[] = [
     {
@@ -49,7 +49,7 @@ function Experience() {
   }, []);
   return (
     <div className=" flex flex-col ">
-      <span className="text-5xl z-10 bg-black max-mobile:text-4xl  max-[430px]:text-[2rem] max-[430px]:p-3  text-teal-200 font-bold neon-sign-purple w-max rounded-xl -mt-[6.5rem] p-4  ">
+      <span className="text-5xl bg-black max-mobile:text-4xl  max-[430px]:text-[2rem] max-[430px]:p-3  text-teal-200 font-bold neon-sign-purple w-max rounded-xl -mt-[6.5rem] p-4  ">
         {" "}
         &lt; Experience / &gt;
       </span>

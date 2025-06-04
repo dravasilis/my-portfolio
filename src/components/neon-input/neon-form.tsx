@@ -28,7 +28,6 @@ function NeonForm() {
           setEmail("");
           setBody("");
           setSubmitted(true);
-          console.log(email);
         },
         (error) => {
           console.log("FAILED...", error.text);

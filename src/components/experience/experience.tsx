@@ -25,8 +25,6 @@ function Experience() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            console.log(1);
-
             entry.target.classList.add("visibleTimestamp");
           } else {
             entry.target.classList.remove("visibleTimestamp");

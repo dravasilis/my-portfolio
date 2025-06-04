@@ -1,6 +1,7 @@
-export interface Project{
-    name:string,
-    description:string,
+export interface Project {
+    name: string,
+    description: string,
     img: string,
-    skills: string
+    skills: string,
+    url?: string;
 }

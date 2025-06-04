@@ -11,6 +11,7 @@ function Work() {
         "Videogame Platform, with API integration providing information about games, platforms and developers.",
       img: "https://dravasilis.github.io/my-portfolio/assets/img/videogame-platform.png",
       skills: "Frontend Development, NextJS,API, Typescript, CSS, HTML",
+      url: "https://video-game-platform-vasilis-dramitinos-projects.vercel.app/",
     },
     {
       name: "Admin Customer Rewards App",
@@ -85,7 +86,13 @@ function Work() {
               {project.name}
             </span>
             {/* image  */}
-            <div className=" relative">
+            <div
+              title={`Click to navigate to ${project.name}`}
+              className={`relative ${project.url ? "cursor-pointer" : ""}`}
+              onClick={() => {
+                project.url && window.open(project.url, "_blank");
+              }}
+            >
               <div className="projectImg-container">
                 <img src={project.img} alt="" className="rounded-xl" />
               </div>

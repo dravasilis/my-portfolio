@@ -159,19 +159,19 @@ function MainView() {
       >
         <div
           ref={verticalProgressbarRef}
-          className="min-h-[25rem] max-h-[3610px]  max-tablet:max-h-[2750px] max-mobile:max-h-[3450px] max-mobileXS:max-h-[245rem] setOverflow  absolute ml-80 max-mobile:ml-[3rem] max-tablet:ml-[15rem]  p-[2px] z-0 rounded-3xl bg-myTeal glow"
+          className="min-h-[25rem] max-h-[3610px]  max-tablet:max-h-[2750px] max-mobile:max-h-[3510px] max-mobileXS:max-h-[250rem] setOverflow  absolute ml-80 max-mobile:ml-[3rem] max-tablet:ml-[15rem]  p-[2px] z-0 rounded-3xl bg-myTeal glow"
         ></div>
         <div
           ref={horizontalProgressbarRef}
-          className="absolute max-w-[45rem] max-laptop:!max-w-[32rem] max-mobile:!max-w-[20rem] max-mobileXS:!max-w-[18.5rem] max-mobileXXS:!max-w-[14.5rem]   ml-80  max-mobile:ml-[3rem] max-tablet:ml-[15rem] top-[3655px]  max-tablet:top-[2800px] max-mobile:top-[218.5rem] max-mobileXS:top-[248rem]  p-[2px] z-0 rounded-3xl bg-myTeal glow"
+          className="absolute max-w-[45rem] max-laptop:!max-w-[32rem] max-mobile:!max-w-[20rem] max-mobileXS:!max-w-[18.5rem] max-mobileXXS:!max-w-[14.5rem]   ml-80  max-mobile:ml-[3rem] max-tablet:ml-[15rem] top-[3655px]  max-tablet:top-[2800px] max-mobile:top-[222.25rem] max-mobileXS:top-[252.75rem]  p-[2px] z-0 rounded-3xl bg-myTeal glow"
         ></div>
         <div
           ref={verticalProgressbarRef2}
-          className="absolute max-h-[1848px] max-tablet:max-h-[1600px] max-mobile:max-h-[1520px] max-mobileXS:max-h-[1400px] ml-[65rem] max-laptop:!ml-[52rem] max-tablet:!ml-[47rem] max-mobile:!ml-[23rem] max-mobileXS:!ml-[21.5rem] max-mobileXXS:!ml-[17.5rem] top-[3655px] max-tablet:!top-[2800px] max-mobile:!top-[218.5rem] max-mobileXS:!top-[248rem]   p-[2px] z-0 rounded-3xl bg-myTeal glow"
+          className="absolute max-h-[1848px] max-tablet:max-h-[1600px] max-mobile:max-h-[1540px] max-mobileXS:max-h-[1447px] ml-[65rem] max-laptop:!ml-[52rem] max-tablet:!ml-[47rem] max-mobile:!ml-[23rem] max-mobileXS:!ml-[21.5rem] max-mobileXXS:!ml-[17.5rem] top-[3655px] max-tablet:!top-[2800px] max-mobile:!top-[222.25rem] max-mobileXS:!top-[252.75rem]   p-[2px] z-0 rounded-3xl bg-myTeal glow"
         ></div>
         <div
           ref={horizontalProgressbarRef2}
-          className="absolute ml-[65rem] max-laptop:ml-[52rem] max-tablet:ml-[47.2rem] max-mobile:ml-[23.2rem] max-mobileXS:ml-[21.75rem] max-mobileXXS:ml-[17.75rem] top-[5500px] max-tablet:top-[4400px] max-mobile:top-[313.25rem] max-mobileXS:top-[335.25rem]  p-[2px] z-0 rounded-3xl bg-myTeal glow"
+          className="absolute ml-[65rem] max-laptop:ml-[52rem] max-tablet:ml-[47.2rem] max-mobile:ml-[23.2rem] max-mobileXS:ml-[21.75rem] max-mobileXXS:ml-[17.75rem] top-[5500px] max-tablet:top-[4400px] max-mobile:top-[318.25rem] max-mobileXS:top-[343rem]  p-[2px] z-0 rounded-3xl bg-myTeal glow"
         ></div>
         <div className="flex flex-col pl-96 max-mobile:pl-[5rem] max-mobile:mt-4 max-tablet:pl-[19rem] gap-96 max-tablet:gap-40">
           <Introduction setScrollToWork={setScrollToWork} />

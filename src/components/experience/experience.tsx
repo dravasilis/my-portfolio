@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
-import "./experience.css";
 import { Timeline } from "../../models/timeline";
+import "./experience.css";
 function Experience() {
   const timestamps: Timeline[] = [
     {
@@ -25,8 +25,6 @@ function Experience() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            console.log(1);
-
             entry.target.classList.add("visibleTimestamp");
           } else {
             entry.target.classList.remove("visibleTimestamp");
@@ -49,11 +47,11 @@ function Experience() {
   }, []);
   return (
     <div className=" flex flex-col ">
-      <span className="text-5xl max-mobile:text-4xl  max-[430px]:text-[2rem] max-[430px]:p-3  text-teal-200 font-bold neon-sign-purple w-max rounded-xl -mt-[6.5rem] p-4  ">
+      <span className="text-5xl bg-black max-mobile:text-4xl  max-[430px]:text-[2rem] max-[430px]:p-3  text-teal-200 font-bold neon-sign-purple w-max rounded-xl -mt-[6.5rem] p-4  ">
         {" "}
         &lt; Experience / &gt;
       </span>
-      <div className=" w-max  ml-[36rem] max-laptop:ml-[22rem] max-mobile:ml-[12rem] max-mobileXS:ml-[11rem] max-mobileXXS:ml-[7rem] top-[3800px] max-tablet:top-[2900px] max-mobile:top-[225rem] max-mobileXS:top-[251rem] absolute  flex flex-col gap-[20rem]">
+      <div className=" w-max  ml-[36rem] max-laptop:ml-[22rem] max-mobile:ml-[12rem] max-mobileXS:ml-[11rem] max-mobileXXS:ml-[7rem] top-[3800px] max-tablet:top-[2900px] max-mobile:top-[225rem] max-mobileXS:top-[255rem] absolute  flex flex-col gap-[20rem]">
         <span
           ref={yearLabelRef}
           className="neon-sign-purple opacity-0    text-white w-max py-4 px-12 duration-1000 z-[1] text-3xl bg-slate-900  rounded-xl"
@@ -79,10 +77,14 @@ function Experience() {
             key={index}
             ref={(el) => (timestampRefs.current[index] = el)}
             className={`flex relative ${
-              index === (1 || 3) ? " -right-[32rem] max-laptop:-right-[3rem] max-mobileXS:right-0" : " max-laptop:w-[35rem] "
+              index === (1 || 3)
+                ? " -right-[32rem] max-laptop:-right-[3rem] max-mobileXS:right-0"
+                : " max-laptop:w-[35rem] "
             } bg-slate-900 z-[1] flex-col gap-2 items-center neon-sign-blue max-mobileXS:!w-full -ml-44 max-laptop:!-ml-4 duration-1000 opacity-0 p-8 max-mobileXS:p-4 w-max rounded-2xl `}
           >
-            <span className="text-white text-xl max-mobileXS:text-base text-center">{timestamp.description}</span>
+            <span className="text-white text-xl max-mobileXS:text-base text-center">
+              {timestamp.description}
+            </span>
           </div>
         ))}
       </div>

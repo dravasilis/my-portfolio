@@ -70,7 +70,7 @@ function Experience() {
           ref={yearLabelRef3}
           className="neon-sign-purple opacity-0   text-white w-max py-4 px-12 duration-1000 z-[1] text-3xl bg-slate-900  rounded-xl"
         >
-          2023
+          2022
         </span>
       </div>
       <div className=" flex flex-col gap-[20rem] py-[20rem] max-mobile:py-[17rem]">

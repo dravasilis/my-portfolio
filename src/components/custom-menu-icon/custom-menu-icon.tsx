@@ -47,6 +47,8 @@ function CustomMenuIcon({ handleClick, isMenuOpen }: CustomMenuIconProps) {
         return;
       }
       secondLineRef.current.style.display = "block";
+      secondLineRef.current.style.width = "75%";
+
       firstLineRef.current.style.rotate = "180deg";
       firstLineRef.current.style.position = "relative";
       firstLineRef.current.style.top = "0px";
@@ -62,7 +64,7 @@ function CustomMenuIcon({ handleClick, isMenuOpen }: CustomMenuIconProps) {
     if (!secondLineRef.current || !thirdLineRef.current) {
       return;
     }
-    if (type === "hover") {
+    if (type === "hover" && window.innerHeight>680) {
       secondLineRef.current.style.width = "100%";
       thirdLineRef.current.style.width = "100%";
     } else if (type === "leave") {
@@ -73,7 +75,7 @@ function CustomMenuIcon({ handleClick, isMenuOpen }: CustomMenuIconProps) {
   return (
     <div
       ref={menuIconRef}
-      className=" flex flex-col z-10 items-end gap-2 w-9 hover:cursor-pointer  absolute opacity-75   -right-[20%] "
+      className=" flex flex-col z-10 items-end gap-2 w-9 max-mobileXS:gap-[0.4rem] max-mobileXS:w-8 hover:cursor-pointer  absolute opacity-75   -right-[20%] "
       onClick={() => handleClick()}
       onMouseOver={() => handleMenuHover("hover")}
       onMouseLeave={() => handleMenuHover("leave")}

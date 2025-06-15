@@ -1,9 +1,18 @@
 .fade-in {
     opacity: 0;
     margin-left: -18rem;
-    transition-duration:1500ms;
+    transition: all 0.3s ease-in;
 }
+@media screen and (max-width:680px) {
+    .fade-in{
+    margin-left: 0;
 
+    }
+    .fade-in.visible{
+        margin-left: 0;
+
+    }
+}
 .fade-in.visible {
     opacity: 1;
     margin-left: -8rem;
